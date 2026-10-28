@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">NIST SP 800-207 zero trust components mapped to the data center</title>
+  <desc id="desc">Policy inputs such as identity, device and workload posture, threat intelligence, activity logs and asset labels feed the policy engine. The policy engine decides whether to allow a request and the policy administrator pushes that decision to a policy enforcement point. In the data plane, a subject such as a user, service or workload reaches a resource only through the enforcement point, which can be an NGFW, a distributed firewall, a ZTNA gateway or a service mesh proxy.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#42a5f5"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <!-- Plane containers -->
+  <rect x="380" y="140" width="780" height="164" rx="18" fill="#1e88e5" fill-opacity="0.06" stroke="#42a5f5" stroke-opacity="0.5"/>
+  <rect x="380" y="364" width="780" height="168" rx="18" fill="#22c55e" fill-opacity="0.04" stroke="#4ade80" stroke-opacity="0.45"/>
+
+  <!-- Inputs to policy engine -->
+  <g fill="none" stroke="#42a5f5" stroke-width="1.8" stroke-opacity="0.7">
+    <path d="M290 182C350 182 350 236 410 236"/>
+    <path d="M290 254C350 254 350 238 410 238"/>
+    <path d="M290 326C350 326 350 240 410 240"/>
+    <path d="M290 398C350 398 350 242 410 242"/>
+    <path d="M290 470C350 470 350 244 410 244"/>
+  </g>
+
+  <!-- Engine to administrator -->
+  <path d="M740 240H796" fill="none" stroke="#42a5f5" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Administrator to PEP -->
+  <path d="M965 290V334H780V396" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Data plane flow -->
+  <g fill="none" stroke="#4ade80" stroke-width="2.5">
+    <path d="M610 455H656" marker-end="url(#arrowGreen)"/>
+    <path d="M900 455H946" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Zero trust in the data center</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">NIST SP 800-207 logical components, mapped to data center controls</text>
+
+    <text x="40" y="134" font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5">POLICY INPUTS</text>
+    <text x="1136" y="164" text-anchor="end" font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5">CONTROL PLANE</text>
+    <text x="1136" y="388" text-anchor="end" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4ade80">DATA PLANE</text>
+
+    <!-- Inputs -->
+    <g stroke="#1e88e5" stroke-opacity="0.6">
+      <rect x="40" y="152" width="250" height="60" rx="12" fill="url(#card)"/>
+      <rect x="40" y="224" width="250" height="60" rx="12" fill="url(#card)"/>
+      <rect x="40" y="296" width="250" height="60" rx="12" fill="url(#card)"/>
+      <rect x="40" y="368" width="250" height="60" rx="12" fill="url(#card)"/>
+      <rect x="40" y="440" width="250" height="60" rx="12" fill="url(#card)"/>
+    </g>
+    <g>
+      <text x="60" y="178" font-size="14" font-weight="700" fill="#f1f5fb">Identity</text>
+      <text x="60" y="198" font-size="12" fill="#a9b8cc">IdP, MFA, PAM, service identities</text>
+      <text x="60" y="250" font-size="14" font-weight="700" fill="#f1f5fb">Device and workload posture</text>
+      <text x="60" y="270" font-size="12" fill="#a9b8cc">EDR, patch and vulnerability state</text>
+      <text x="60" y="322" font-size="14" font-weight="700" fill="#f1f5fb">Threat intelligence</text>
+      <text x="60" y="342" font-size="12" fill="#a9b8cc">IOC feeds, reputation, KEV</text>
+      <text x="60" y="394" font-size="14" font-weight="700" fill="#f1f5fb">Activity logs and SIEM</text>
+      <text x="60" y="414" font-size="12" fill="#a9b8cc">Flow records, NDR, audit trails</text>
+      <text x="60" y="466" font-size="14" font-weight="700" fill="#f1f5fb">Asset and data labels</text>
+      <text x="60" y="486" font-size="12" fill="#a9b8cc">CMDB, workload tags, classification</text>
+    </g>
+
+    <!-- Control plane -->
+    <rect x="410" y="190" width="330" height="100" rx="14" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="434" y="224" font-size="17" font-weight="700" fill="#f1f5fb">Policy engine</text>
+    <text x="434" y="248" font-size="13" fill="#a9b8cc">Evaluates every request against</text>
+    <text x="434" y="267" font-size="13" fill="#a9b8cc">policy: grant, deny or revoke</text>
+
+    <rect x="800" y="190" width="330" height="100" rx="14" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="824" y="224" font-size="17" font-weight="700" fill="#f1f5fb">Policy administrator</text>
+    <text x="824" y="248" font-size="13" fill="#a9b8cc">Sets up or tears down the session</text>
+    <text x="824" y="267" font-size="13" fill="#a9b8cc">and configures the enforcement point</text>
+
+    <text x="872" y="326" text-anchor="middle" font-size="12" font-weight="600" fill="#86efac">decision pushed per session</text>
+
+    <!-- Data plane -->
+    <rect x="410" y="410" width="200" height="90" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.7"/>
+    <text x="510" y="446" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Subject</text>
+    <text x="510" y="468" text-anchor="middle" font-size="12" fill="#a9b8cc">User, service account</text>
+    <text x="510" y="485" text-anchor="middle" font-size="12" fill="#a9b8cc">or workload</text>
+
+    <rect x="660" y="398" width="240" height="114" rx="14" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="780" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5fb">Policy enforcement point</text>
+    <text x="780" y="454" text-anchor="middle" font-size="12" fill="#bbf7d0">NGFW, distributed firewall,</text>
+    <text x="780" y="472" text-anchor="middle" font-size="12" fill="#bbf7d0">ZTNA gateway, service mesh</text>
+    <text x="780" y="490" text-anchor="middle" font-size="12" fill="#bbf7d0">proxy, fabric contract</text>
+
+    <rect x="950" y="410" width="186" height="90" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.7"/>
+    <text x="1043" y="446" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Resource</text>
+    <text x="1043" y="468" text-anchor="middle" font-size="12" fill="#a9b8cc">Application, API</text>
+    <text x="1043" y="485" text-anchor="middle" font-size="12" fill="#a9b8cc">or database</text>
+
+    <text x="634" y="526" text-anchor="middle" font-size="11" fill="#a9b8cc">untrusted</text>
+    <text x="1000" y="526" text-anchor="middle" font-size="11" fill="#a9b8cc">implicit trust zone: keep it tiny</text>
+
+    <!-- Note -->
+    <rect x="250" y="552" width="700" height="32" rx="16" fill="#07111f" stroke="#4ade80" stroke-opacity="0.7"/>
+    <text x="600" y="573" text-anchor="middle" font-size="13" font-weight="600" fill="#bbf7d0">Access is granted per session from identity and context, never from network location alone</text>
+  </g>
+</svg>

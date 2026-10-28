@@ -1,0 +1,364 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand wordmark font, subset to Latin letters and digits (source: assets/fonts). Preloaded in app/layout.tsx. */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/orbitron-brand.woff2') format('woff2');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Light theme (default when no .dark class) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f7fb;
+  --bg-card: #ffffff;
+  --bg-elevated: #eaf2fc;
+
+  /* Brand accents (XeroStop logo blues) */
+  --accent-primary: #1976d2;
+  --accent-primary-hover: #1565c0;
+  --accent-secondary: #42a5f5;
+  --accent-secondary-hover: #1e88e5;
+
+  /* Brand navy, used for hero, footer and CTA bands in both themes */
+  --brand-navy: #0b1f3a;
+  --brand-navy-2: #132b4f;
+  --brand-navy-3: #1b3a66;
+
+  /* Text colors - light theme */
+  --text-primary: #0b1f3a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  /* Border colors */
+  --border-default: #dbe5f1;
+  --border-hover: #b9cde6;
+
+  /* Shadows */
+  --shadow-glow-sm: 0 0 10px rgba(30, 136, 229, 0.2);
+  --shadow-glow-md: 0 0 20px rgba(30, 136, 229, 0.3);
+  --shadow-glow-lg: 0 0 30px rgba(30, 136, 229, 0.4);
+
+  /* RGB channels consumed by tailwind.config.ts (keep in sync with hex values above) */
+  --bg-primary-rgb: 255 255 255;
+  --bg-secondary-rgb: 244 247 251;
+  --bg-card-rgb: 255 255 255;
+  --bg-elevated-rgb: 234 242 252;
+  --accent-primary-rgb: 25 118 210;
+  /* Accent used for text: AA contrast on light surfaces (overridden for dark theme) */
+  --accent-text-rgb: 21 101 192;
+  --accent-primary-hover-rgb: 21 101 192;
+  --accent-secondary-rgb: 66 165 245;
+  --accent-secondary-hover-rgb: 30 136 229;
+  --text-primary-rgb: 11 31 58;
+  --text-secondary-rgb: 71 85 105;
+  --text-muted-rgb: 100 116 139;
+  --border-default-rgb: 219 229 241;
+  --border-hover-rgb: 185 205 230;
+}
+
+:root.dark {
+  /* Dark theme */
+  --bg-primary: #07111f;
+  --bg-secondary: #0b1a2e;
+  --bg-card: #0f2240;
+  --bg-elevated: #15294a;
+
+  --text-primary: #f1f5fb;
+  --text-secondary: #a9b8cc;
+  --text-muted: #7f90a8;
+
+  --border-default: #1d3354;
+  --border-hover: #2b4a75;
+
+  --shadow-glow-sm: 0 0 10px rgba(30, 136, 229, 0.3);
+  --shadow-glow-md: 0 0 20px rgba(30, 136, 229, 0.4);
+  --shadow-glow-lg: 0 0 30px rgba(30, 136, 229, 0.5);
+
+  --accent-text-rgb: 100 181 246;
+
+  --bg-primary-rgb: 7 17 31;
+  --bg-secondary-rgb: 11 26 46;
+  --bg-card-rgb: 15 34 64;
+  --bg-elevated-rgb: 21 41 74;
+  --text-primary-rgb: 241 245 251;
+  --text-secondary-rgb: 169 184 204;
+  --text-muted-rgb: 127 144 168;
+  --border-default-rgb: 29 51 84;
+  --border-hover-rgb: 43 74 117;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background-primary text-text-primary antialiased;
+    overflow-x: clip;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary-hover);
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-primary ring-offset-2 ring-offset-background-primary;
+  }
+
+  ::selection {
+    background-color: rgba(30, 136, 229, 0.3);
+    color: var(--text-primary);
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: min(1200px, 92vw);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: min(1200px, 86vw);
+    }
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent;
+  }
+
+  /* Text gradient for use on navy backgrounds */
+  .text-gradient-light {
+    @apply bg-gradient-to-r from-sky-300 via-accent-secondary to-accent-primary bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply rounded-lg border border-border bg-background-card p-6 transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-border-hover shadow-glow-sm;
+  }
+
+  /* BTC-style elevated card with soft brand tint */
+  .brand-card {
+    @apply relative rounded-2xl border border-border bg-background-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-primary/40 hover:shadow-[0_18px_40px_-18px_rgba(30,136,229,0.45)];
+  }
+
+  .brand-card-tinted {
+    @apply relative rounded-2xl border border-accent-primary/20 bg-gradient-to-br from-accent-primary/[0.08] via-background-card to-accent-secondary/[0.06] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent-primary/50 hover:shadow-[0_18px_40px_-18px_rgba(30,136,229,0.45)];
+  }
+
+  .icon-tile {
+    @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent-primary to-accent-secondary text-white shadow-[0_8px_20px_-8px_rgba(30,136,229,0.7)];
+  }
+
+  .navy-band {
+    background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-navy-2) 55%, var(--brand-navy-3) 100%);
+  }
+
+  /* Lightweight version of <PageHero> for simple content pages */
+  .page-hero-simple {
+    @apply relative overflow-hidden border-b border-border bg-gradient-to-br from-sky-50 via-white to-blue-100/70 pb-16 pt-28 dark:from-navy-900 dark:via-navy dark:to-navy-800 sm:pt-32 md:pb-20 md:pt-40;
+  }
+
+  .page-hero-simple::before {
+    content: '';
+    @apply pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full;
+    background: radial-gradient(circle, rgba(30, 136, 229, 0.18), transparent 70%);
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-accent-primary/25 bg-accent-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent-primary;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-primary text-white hover:bg-accent-primary-hover hover:shadow-glow-md;
+  }
+
+  .btn-secondary {
+    @apply btn border border-border bg-transparent text-text-primary hover:border-border-hover hover:bg-background-card;
+  }
+
+  /* Standard content section; content-visibility skips offscreen layout and paint on load. */
+  .section-padding {
+    @apply py-14 md:py-20;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
+  .heading-1 {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+  }
+
+  .heading-2 {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+
+  .heading-3 {
+    @apply text-2xl font-semibold tracking-tight sm:text-3xl;
+  }
+
+  .link {
+    @apply text-accent-primary hover:text-accent-primary-hover transition-colors duration-200;
+  }
+
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-accent-primary transition-all duration-300 content-[''];
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .glass {
+    @apply bg-background-primary/80 backdrop-blur-lg;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bg-grid-light {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .bg-dots-brand {
+    background-image: radial-gradient(circle at 1px 1px, rgba(30, 136, 229, 0.25) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  /* Skip layout and paint for offscreen sections until they approach the viewport. */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
+
+/*
+ * Scroll reveal. Elements marked with [data-reveal] slide into place as they scroll into view using
+ * scroll-driven animations, so no JavaScript runs. Transform-only: text is never faded, so it stays
+ * readable (and passes contrast checks) wherever the element sits in the viewport.
+ * `backwards` fill keeps the end state from overriding hover transforms once the reveal finishes.
+ */
+@keyframes reveal-up {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+}
+
+@keyframes reveal-scale {
+  from {
+    transform: scale(0.92);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal] {
+      animation: reveal-up linear backwards;
+      animation-timeline: view();
+      animation-range: entry 5% entry 75%;
+    }
+
+    [data-reveal='scale'] {
+      animation-name: reveal-scale;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-spin-slow,
+  .animate-float,
+  .animate-bounce,
+  .animate-pulse,
+  .animate-twinkle {
+    animation: none !important;
+  }
+}

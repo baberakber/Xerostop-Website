@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">Three ways to migrate a branch to Cisco Catalyst SD-WAN</title>
+  <desc id="desc">Single-router migration needs a short downtime window. Inline migration of two routers needs minimal downtime and shares both circuits with TLOC extension. Parallel migration keeps the MPLS CE router next to the SD-WAN edge with minimal downtime but no transport redundancy.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Three ways to migrate a branch</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">Choose by how many routers the site has and what it must keep</text>
+
+    <!-- Panels -->
+    <g stroke="#42a5f5" stroke-opacity="0.55">
+      <rect x="40" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+      <rect x="420" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+      <rect x="800" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+    </g>
+
+    <!-- Panel titles -->
+    <g>
+      <text x="64" y="152" font-size="19" font-weight="700" fill="#f1f5fb">Single router</text>
+      <text x="64" y="175" font-size="13" fill="#a9b8cc">One router, one cutover</text>
+      <text x="444" y="152" font-size="19" font-weight="700" fill="#f1f5fb">Inline (two routers)</text>
+      <text x="444" y="175" font-size="13" fill="#a9b8cc">Migrate one router at a time</text>
+      <text x="824" y="152" font-size="19" font-weight="700" fill="#f1f5fb">Parallel</text>
+      <text x="824" y="175" font-size="13" fill="#a9b8cc">Keep the MPLS CE alongside the edge</text>
+    </g>
+
+    <!-- Transport pills -->
+    <g fill="#0b1f3a" stroke="#1e88e5">
+      <rect x="80" y="200" width="120" height="30" rx="15"/>
+      <rect x="240" y="200" width="120" height="30" rx="15"/>
+      <rect x="460" y="200" width="120" height="30" rx="15"/>
+      <rect x="620" y="200" width="120" height="30" rx="15"/>
+      <rect x="840" y="200" width="120" height="30" rx="15"/>
+      <rect x="1000" y="200" width="120" height="30" rx="15"/>
+    </g>
+    <g font-size="13" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="140" y="220">Internet</text>
+      <text x="300" y="220">MPLS</text>
+      <text x="520" y="220">Internet</text>
+      <text x="680" y="220">MPLS</text>
+      <text x="900" y="220">Internet</text>
+      <text x="1060" y="220">MPLS</text>
+    </g>
+
+    <!-- Links: transports to routers -->
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.75">
+      <path d="M140 230L195 268M300 230L245 268"/>
+      <path d="M520 230V268M680 230V268"/>
+      <path d="M900 230V268M1060 230V268"/>
+      <path d="M220 310V346"/>
+      <path d="M520 310V346M680 310V346"/>
+      <path d="M900 310V346M1060 310V346"/>
+    </g>
+    <g fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="5 5">
+      <path d="M590 289H610"/>
+      <path d="M970 289H990"/>
+    </g>
+
+    <!-- Routers -->
+    <rect x="145" y="268" width="150" height="42" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="220" y="294" text-anchor="middle" font-size="14" font-weight="700" fill="#f1f5fb">SD-WAN edge</text>
+
+    <rect x="450" y="268" width="140" height="42" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="520" y="294" text-anchor="middle" font-size="14" font-weight="700" fill="#f1f5fb">Edge 1 (first)</text>
+    <rect x="610" y="268" width="140" height="42" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="680" y="294" text-anchor="middle" font-size="14" font-weight="700" fill="#f1f5fb">Edge 2 (second)</text>
+
+    <rect x="830" y="268" width="140" height="42" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="900" y="294" text-anchor="middle" font-size="14" font-weight="700" fill="#f1f5fb">SD-WAN edge</text>
+    <rect x="990" y="268" width="140" height="42" rx="10" fill="#0b1f3a" stroke="#7f90a8"/>
+    <text x="1060" y="294" text-anchor="middle" font-size="14" font-weight="700" fill="#cbd5e1">MPLS CE (kept)</text>
+
+    <!-- Link labels -->
+    <g font-size="11" fill="#86efac" text-anchor="middle">
+      <text x="600" y="330">TLOC extension</text>
+      <text x="980" y="330">MPLS extended</text>
+    </g>
+
+    <!-- LAN bars -->
+    <g fill="#0b1f3a" stroke="#1e88e5" stroke-opacity="0.8">
+      <rect x="100" y="346" width="240" height="30" rx="8"/>
+      <rect x="480" y="346" width="240" height="30" rx="8"/>
+      <rect x="860" y="346" width="240" height="30" rx="8"/>
+    </g>
+    <g font-size="13" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="220" y="366">Branch LAN</text>
+      <text x="600" y="366">Branch LAN (VRRP)</text>
+      <text x="980" y="366">Branch LAN (VRRP)</text>
+    </g>
+
+    <!-- Attributes -->
+    <g font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5">
+      <text x="64" y="414">DOWNTIME</text>
+      <text x="444" y="414">DOWNTIME</text>
+      <text x="824" y="414">DOWNTIME</text>
+      <text x="64" y="476">REDUNDANCY AFTER</text>
+      <text x="444" y="476">REDUNDANCY AFTER</text>
+      <text x="824" y="476">REDUNDANCY AFTER</text>
+      <text x="64" y="538">BEST FOR</text>
+      <text x="444" y="538">BEST FOR</text>
+      <text x="824" y="538">BEST FOR</text>
+    </g>
+
+    <g font-size="13" font-weight="700" text-anchor="middle">
+      <rect x="64" y="424" width="170" height="28" rx="14" fill="#a78bfa" fill-opacity="0.15" stroke="#a78bfa"/>
+      <text x="149" y="443" fill="#ddd6fe">Yes, keep it short</text>
+      <rect x="444" y="424" width="120" height="28" rx="14" fill="#22c55e" fill-opacity="0.15" stroke="#4ade80"/>
+      <text x="504" y="443" fill="#bbf7d0">Minimal</text>
+      <rect x="824" y="424" width="120" height="28" rx="14" fill="#22c55e" fill-opacity="0.15" stroke="#4ade80"/>
+      <text x="884" y="443" fill="#bbf7d0">Minimal</text>
+    </g>
+
+    <g font-size="14" fill="#a9b8cc">
+      <text x="64" y="497">Single router with</text>
+      <text x="64" y="515">dual transports</text>
+      <text x="444" y="497">Two routers sharing both</text>
+      <text x="444" y="515">circuits via TLOC extension</text>
+      <text x="824" y="497">None for transport;</text>
+      <text x="824" y="515">treat it as an interim step</text>
+
+      <text x="64" y="559">Small branches with</text>
+      <text x="64" y="577">a single WAN router</text>
+      <text x="444" y="559">Branches with two</text>
+      <text x="444" y="577">WAN routers</text>
+      <text x="824" y="559">Sites that still need MPLS for</text>
+      <text x="824" y="577">legacy apps, UC or WAAS</text>
+    </g>
+  </g>
+</svg>

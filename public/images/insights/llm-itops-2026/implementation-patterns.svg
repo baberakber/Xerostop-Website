@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">Five implementation patterns for LLMs in IT operations</title>
+  <desc id="desc">A staircase of five patterns, each adding control, cost and governance: prompt-only, retrieval-augmented generation, tools and agents, fine-tuning, and self-hosted models, with typical IT operations examples for each.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173563"/>
+      <stop offset="1" stop-color="#0f2443"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5 0 10Z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="64" y="66" font-size="26" font-weight="700" fill="#f1f5fb">Five implementation patterns, from simple to complex</text>
+    <text x="64" y="94" font-size="15" fill="#a9b8cc">Climb only as high as the use case needs. Most IT ops pilots start on the first two steps.</text>
+
+    <!-- Step 1 -->
+    <g>
+      <rect x="64" y="380" width="200" height="160" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.7" stroke-width="1.5"/>
+      <text x="84" y="410" font-size="12" font-weight="700" fill="#42a5f5">STEP 01</text>
+      <text x="84" y="436" font-size="18" font-weight="700" fill="#f1f5fb">Prompt-only</text>
+      <path d="M84 450H244" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="13" fill="#bfd0e4">
+        <text x="84" y="474">Summaries, postmortems</text>
+        <text x="84" y="496">Knowledge base reply drafts</text>
+        <text x="84" y="518">Explaining scripts and logs</text>
+      </g>
+    </g>
+
+    <!-- Step 2 -->
+    <g>
+      <rect x="282" y="330" width="200" height="210" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.7" stroke-width="1.5"/>
+      <text x="302" y="360" font-size="12" font-weight="700" fill="#42a5f5">STEP 02</text>
+      <text x="302" y="386" font-size="18" font-weight="700" fill="#f1f5fb">RAG</text>
+      <text x="302" y="406" font-size="12" fill="#7cc4fa">Retrieval-augmented generation</text>
+      <path d="M302 420H462" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="13" fill="#bfd0e4">
+        <text x="302" y="444">IT knowledge search</text>
+        <text x="302" y="466">Self-service IT assistant</text>
+        <text x="302" y="488">Runbook and policy Q&amp;A</text>
+      </g>
+    </g>
+
+    <!-- Step 3 -->
+    <g>
+      <rect x="500" y="280" width="200" height="260" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.7" stroke-width="1.5"/>
+      <text x="520" y="310" font-size="12" font-weight="700" fill="#42a5f5">STEP 03</text>
+      <text x="520" y="336" font-size="18" font-weight="700" fill="#f1f5fb">Tools and agents</text>
+      <text x="520" y="356" font-size="12" fill="#7cc4fa">The model calls APIs and tools</text>
+      <path d="M520 370H680" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="13" fill="#bfd0e4">
+        <text x="520" y="394">Monitoring queries</text>
+        <text x="520" y="416">Request fulfilment</text>
+        <text x="520" y="438">Bounded remediation</text>
+      </g>
+    </g>
+
+    <!-- Step 4 -->
+    <g>
+      <rect x="718" y="230" width="200" height="310" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.7" stroke-width="1.5"/>
+      <text x="738" y="260" font-size="12" font-weight="700" fill="#42a5f5">STEP 04</text>
+      <text x="738" y="286" font-size="18" font-weight="700" fill="#f1f5fb">Fine-tuning</text>
+      <text x="738" y="306" font-size="12" fill="#7cc4fa">Adapt a model with your data</text>
+      <path d="M738 320H898" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="13" fill="#bfd0e4">
+        <text x="738" y="344">High-volume classification</text>
+        <text x="738" y="366">Strict output formats</text>
+        <text x="738" y="388">Domain-specific language</text>
+      </g>
+    </g>
+
+    <!-- Step 5 -->
+    <g>
+      <rect x="936" y="180" width="200" height="360" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.7" stroke-width="1.5"/>
+      <text x="956" y="210" font-size="12" font-weight="700" fill="#42a5f5">STEP 05</text>
+      <text x="956" y="236" font-size="18" font-weight="700" fill="#f1f5fb">Self-hosted models</text>
+      <text x="956" y="256" font-size="12" fill="#7cc4fa">Open models on your own GPUs</text>
+      <path d="M956 270H1116" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="13" fill="#bfd0e4">
+        <text x="956" y="294">Data residency rules</text>
+        <text x="956" y="316">Air-gapped networks</text>
+        <text x="956" y="338">Predictable cost at scale</text>
+      </g>
+    </g>
+
+    <!-- Axis -->
+    <path d="M64 566H1130" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+    <text x="600" y="590" font-size="14" fill="#a9b8cc" text-anchor="middle">More control, more cost, more governance and more skills required</text>
+  </g>
+</svg>

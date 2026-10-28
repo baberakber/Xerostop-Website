@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">The compliant call recording lifecycle</title>
+  <desc id="desc">Seven stages: notify, capture, protect, store, control, retain and dispose. Notify and capture happen before and during the call; protect, store and control happen in the platform; retain and dispose cover the end of life of each recording.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <linearGradient id="track" gradientUnits="userSpaceOnUse" x1="114" y1="0" x2="1086" y2="0">
+      <stop offset="0" stop-color="#1e88e5"/>
+      <stop offset="0.75" stop-color="#42a5f5"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#42a5f5" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#1e88e5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="640" fill="url(#bg)"/>
+  <rect width="1200" height="640" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="54" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">The compliant recording lifecycle</text>
+    <text x="600" y="86" text-anchor="middle" font-size="15" fill="#a9b8cc">Auditors test every stage. A gap anywhere breaks the evidential chain.</text>
+
+    <!-- Phase brackets -->
+    <g fill="none" stroke-width="1.5">
+      <path d="M48 160V146H346V160" stroke="#42a5f5" stroke-opacity="0.7"/>
+      <path d="M372 160V146H832V160" stroke="#42a5f5" stroke-opacity="0.7"/>
+      <path d="M858 160V146H1152V160" stroke="#a78bfa" stroke-opacity="0.8"/>
+    </g>
+    <g font-size="11" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+      <text x="197" y="134" fill="#42a5f5">BEFORE AND DURING THE CALL</text>
+      <text x="602" y="134" fill="#42a5f5">INSIDE THE PLATFORM</text>
+      <text x="1005" y="134" fill="#a78bfa">END OF LIFE</text>
+    </g>
+
+    <!-- Track -->
+    <path d="M114 236H1086" stroke="url(#track)" stroke-width="3" stroke-opacity="0.85"/>
+
+    <!-- Stage nodes -->
+    <g>
+      <circle cx="114" cy="236" r="52" fill="url(#glow)"/>
+      <circle cx="276" cy="236" r="52" fill="url(#glow)"/>
+      <circle cx="438" cy="236" r="52" fill="url(#glow)"/>
+      <circle cx="600" cy="236" r="52" fill="url(#glow)"/>
+      <circle cx="762" cy="236" r="52" fill="url(#glow)"/>
+    </g>
+    <g fill="#0b1f3a" stroke="#42a5f5" stroke-width="2">
+      <circle cx="114" cy="236" r="30"/>
+      <circle cx="276" cy="236" r="30"/>
+      <circle cx="438" cy="236" r="30"/>
+      <circle cx="600" cy="236" r="30"/>
+      <circle cx="762" cy="236" r="30"/>
+    </g>
+    <g fill="#0b1f3a" stroke="#a78bfa" stroke-width="2">
+      <circle cx="924" cy="236" r="30"/>
+      <circle cx="1086" cy="236" r="30"/>
+    </g>
+    <g font-size="20" font-weight="700" text-anchor="middle">
+      <text x="114" y="243" fill="#e3f2fd">1</text>
+      <text x="276" y="243" fill="#e3f2fd">2</text>
+      <text x="438" y="243" fill="#e3f2fd">3</text>
+      <text x="600" y="243" fill="#e3f2fd">4</text>
+      <text x="762" y="243" fill="#e3f2fd">5</text>
+      <text x="924" y="243" fill="#ede9fe">6</text>
+      <text x="1086" y="243" fill="#ede9fe">7</text>
+    </g>
+
+    <!-- Stage cards -->
+    <g stroke-opacity="0.6">
+      <rect x="40" y="296" width="148" height="176" rx="14" fill="url(#card)" stroke="#1e88e5"/>
+      <rect x="202" y="296" width="148" height="176" rx="14" fill="url(#card)" stroke="#1e88e5"/>
+      <rect x="364" y="296" width="148" height="176" rx="14" fill="url(#card)" stroke="#1e88e5"/>
+      <rect x="526" y="296" width="148" height="176" rx="14" fill="url(#card)" stroke="#1e88e5"/>
+      <rect x="688" y="296" width="148" height="176" rx="14" fill="url(#card)" stroke="#1e88e5"/>
+      <rect x="850" y="296" width="148" height="176" rx="14" fill="url(#card)" stroke="#a78bfa"/>
+      <rect x="1012" y="296" width="148" height="176" rx="14" fill="url(#card)" stroke="#a78bfa"/>
+    </g>
+    <g font-size="17" font-weight="700" fill="#f1f5fb" text-anchor="middle">
+      <text x="114" y="330">Notify</text>
+      <text x="276" y="330">Capture</text>
+      <text x="438" y="330">Protect</text>
+      <text x="600" y="330">Store</text>
+      <text x="762" y="330">Control</text>
+      <text x="924" y="330">Retain</text>
+      <text x="1086" y="330">Dispose</text>
+    </g>
+    <g stroke-width="1" stroke-opacity="0.6">
+      <path d="M60 346H168M222 346H330M384 346H492M546 346H654M708 346H816" stroke="#1e88e5"/>
+      <path d="M870 346H978M1032 346H1140" stroke="#a78bfa"/>
+    </g>
+    <g font-size="12.5" fill="#a9b8cc" text-anchor="middle">
+      <text x="114" y="374">Announce before</text>
+      <text x="114" y="394">recording starts;</text>
+      <text x="114" y="414">offer an opt-out</text>
+
+      <text x="276" y="374">In-scope users</text>
+      <text x="276" y="394">only; pause for</text>
+      <text x="276" y="414">card details</text>
+
+      <text x="438" y="374">TLS and SRTP in</text>
+      <text x="438" y="394">transit, AES-256</text>
+      <text x="438" y="414">at rest</text>
+
+      <text x="600" y="374">Immutable or</text>
+      <text x="600" y="394">WORM storage in</text>
+      <text x="600" y="414">approved region</text>
+
+      <text x="762" y="374">RBAC and MFA;</text>
+      <text x="762" y="394">every playback</text>
+      <text x="762" y="414">is logged</text>
+
+      <text x="924" y="374">Schedule set per</text>
+      <text x="924" y="394">regulation; legal</text>
+      <text x="924" y="414">hold overrides</text>
+
+      <text x="1086" y="374">Automated and</text>
+      <text x="1086" y="394">verifiable, with</text>
+      <text x="1086" y="414">evidence kept</text>
+    </g>
+    <g font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">
+      <text x="114" y="452" fill="#42a5f5">CONSENT</text>
+      <text x="276" y="452" fill="#42a5f5">MINIMISE</text>
+      <text x="438" y="452" fill="#42a5f5">ENCRYPT</text>
+      <text x="600" y="452" fill="#42a5f5">PRESERVE</text>
+      <text x="762" y="452" fill="#42a5f5">AUDIT</text>
+      <text x="924" y="452" fill="#a78bfa">GOVERN</text>
+      <text x="1086" y="452" fill="#a78bfa">DELETE</text>
+    </g>
+
+    <!-- Callout -->
+    <rect x="190" y="514" width="820" height="58" rx="14" fill="#a78bfa" fill-opacity="0.1" stroke="#a78bfa" stroke-opacity="0.7"/>
+    <text x="600" y="540" text-anchor="middle" font-size="14.5" font-weight="600" fill="#ede9fe">Retention is a ceiling as well as a floor.</text>
+    <text x="600" y="560" text-anchor="middle" font-size="13" fill="#c4b5fd">Keep each recording as long as the strictest rule requires, and not a day longer.</text>
+  </g>
+</svg>

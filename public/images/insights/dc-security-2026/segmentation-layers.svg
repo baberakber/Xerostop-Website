@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">Three layers of data center segmentation, from macro to micro</title>
+  <desc id="desc">Macro-segmentation separates environments such as production, development and PCI into VRFs with a firewall between them. Application segmentation ring-fences each application and controls traffic between its tiers with fabric contracts or security group tags. Micro-segmentation applies policy to every individual virtual machine, container or server, and the policy follows the workload.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Segmentation from macro to micro</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">Each layer shrinks the blast radius further; mature designs use all three</text>
+
+    <!-- Panels -->
+    <g stroke="#42a5f5" stroke-opacity="0.55">
+      <rect x="40" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+      <rect x="420" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+      <rect x="800" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+    </g>
+
+    <g>
+      <text x="64" y="152" font-size="19" font-weight="700" fill="#f1f5fb">1. Macro-segmentation</text>
+      <text x="64" y="175" font-size="13" fill="#a9b8cc">Separate environments and tenants</text>
+      <text x="444" y="152" font-size="19" font-weight="700" fill="#f1f5fb">2. Application segmentation</text>
+      <text x="444" y="175" font-size="13" fill="#a9b8cc">Ring-fence each application</text>
+      <text x="824" y="152" font-size="19" font-weight="700" fill="#f1f5fb">3. Micro-segmentation</text>
+      <text x="824" y="175" font-size="13" fill="#a9b8cc">Policy on every workload</text>
+    </g>
+
+    <!-- Panel 1 visual: VRFs + inter-VRF firewall -->
+    <g fill="#1e88e5" fill-opacity="0.12" stroke="#42a5f5">
+      <rect x="64" y="204" width="96" height="76" rx="10"/>
+      <rect x="172" y="204" width="96" height="76" rx="10"/>
+      <rect x="280" y="204" width="96" height="76" rx="10"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="112" y="236" font-size="14" font-weight="700" fill="#f1f5fb">PROD</text>
+      <text x="112" y="256" font-size="11" fill="#a9b8cc">VRF / L3VNI</text>
+      <text x="220" y="236" font-size="14" font-weight="700" fill="#f1f5fb">DEV</text>
+      <text x="220" y="256" font-size="11" fill="#a9b8cc">VRF / L3VNI</text>
+      <text x="328" y="236" font-size="14" font-weight="700" fill="#f1f5fb">PCI</text>
+      <text x="328" y="256" font-size="11" fill="#a9b8cc">VRF / L3VNI</text>
+    </g>
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.75">
+      <path d="M112 280V310M220 280V310M328 280V310"/>
+    </g>
+    <rect x="64" y="310" width="312" height="32" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="220" y="331" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">Firewall between VRFs</text>
+
+    <!-- Panel 2 visual: app ringfence -->
+    <rect x="444" y="200" width="312" height="110" rx="14" fill="#22c55e" fill-opacity="0.05" stroke="#4ade80" stroke-dasharray="7 5"/>
+    <text x="600" y="222" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1.2" fill="#86efac">PAYMENTS APP RING-FENCE</text>
+    <g fill="#0b1f3a" stroke="#1e88e5">
+      <rect x="460" y="238" width="80" height="34" rx="10"/>
+      <rect x="560" y="238" width="80" height="34" rx="10"/>
+      <rect x="660" y="238" width="80" height="34" rx="10"/>
+    </g>
+    <g font-size="13" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="500" y="260">Web</text>
+      <text x="600" y="260">App</text>
+      <text x="700" y="260">DB</text>
+    </g>
+    <g fill="none" stroke="#4ade80" stroke-width="2">
+      <path d="M541 255H558" marker-end="url(#arrowGreen)"/>
+      <path d="M641 255H658" marker-end="url(#arrowGreen)"/>
+    </g>
+    <text x="600" y="296" text-anchor="middle" font-size="11" fill="#a9b8cc">web to app: tcp/8443 only; app to db: tcp/1433 only</text>
+    <text x="600" y="334" text-anchor="middle" font-size="12" fill="#a9b8cc">Everything else between tiers is denied</text>
+
+    <!-- Panel 3 visual: per-workload policy -->
+    <g fill="#0b1f3a" stroke="#4ade80" stroke-opacity="0.8">
+      <rect x="824" y="204" width="98" height="40" rx="9"/>
+      <rect x="931" y="204" width="98" height="40" rx="9"/>
+      <rect x="1038" y="204" width="98" height="40" rx="9"/>
+      <rect x="824" y="256" width="98" height="40" rx="9"/>
+      <rect x="931" y="256" width="98" height="40" rx="9"/>
+      <rect x="1038" y="256" width="98" height="40" rx="9"/>
+    </g>
+    <g fill="#4ade80">
+      <rect x="832" y="218" width="12" height="12" rx="3"/>
+      <rect x="939" y="218" width="12" height="12" rx="3"/>
+      <rect x="1046" y="218" width="12" height="12" rx="3"/>
+      <rect x="832" y="270" width="12" height="12" rx="3"/>
+      <rect x="939" y="270" width="12" height="12" rx="3"/>
+      <rect x="1046" y="270" width="12" height="12" rx="3"/>
+    </g>
+    <g font-size="11" font-weight="600" fill="#e2e8f0">
+      <text x="850" y="228">vm-web-01</text>
+      <text x="957" y="228">vm-web-02</text>
+      <text x="1064" y="228">pod-api-a</text>
+      <text x="850" y="280">pod-api-b</text>
+      <text x="957" y="280">db-01</text>
+      <text x="1064" y="280">db-02</text>
+    </g>
+    <text x="980" y="322" text-anchor="middle" font-size="12" fill="#a9b8cc">Policy is enforced at the vNIC, host or pod</text>
+    <text x="980" y="340" text-anchor="middle" font-size="12" fill="#a9b8cc">and follows the workload when it moves</text>
+
+    <!-- Attribute labels -->
+    <g font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5">
+      <text x="64" y="384">ENFORCED BY</text>
+      <text x="444" y="384">ENFORCED BY</text>
+      <text x="824" y="384">ENFORCED BY</text>
+      <text x="64" y="454">CONTAINS</text>
+      <text x="444" y="454">CONTAINS</text>
+      <text x="824" y="454">CONTAINS</text>
+      <text x="64" y="524">TYPICAL TOOLS</text>
+      <text x="444" y="524">TYPICAL TOOLS</text>
+      <text x="824" y="524">TYPICAL TOOLS</text>
+    </g>
+
+    <g font-size="14" fill="#a9b8cc">
+      <text x="64" y="406">Routing isolation plus a stateful</text>
+      <text x="64" y="424">firewall at every VRF boundary</text>
+      <text x="444" y="406">Fabric contracts or group tags</text>
+      <text x="444" y="424">between application tiers</text>
+      <text x="824" y="406">Distributed firewall or host</text>
+      <text x="824" y="424">agent on every workload</text>
+
+      <text x="64" y="476">A breach in DEV cannot reach</text>
+      <text x="64" y="494">PROD or the PCI zone</text>
+      <text x="444" y="476">A breach in one app cannot</text>
+      <text x="444" y="494">reach other apps in the VRF</text>
+      <text x="824" y="476">A breached server cannot reach</text>
+      <text x="824" y="494">its own neighbours</text>
+
+      <text x="64" y="546">VRF-lite, EVPN-VXLAN L3VNIs,</text>
+      <text x="64" y="564">NGFW zones and contexts</text>
+      <text x="444" y="546">Cisco ACI ESGs, TrustSec SGTs,</text>
+      <text x="444" y="564">NSX groups and tags</text>
+      <text x="824" y="546">vDefend DFW, Illumio, Secure</text>
+      <text x="824" y="564">Workload, K8s NetworkPolicy</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">Reference architecture for LLMs in IT operations</title>
+  <desc id="desc">IT data sources such as tickets, runbooks, the CMDB, telemetry and network configs feed a permission-aware retrieval layer. The LLM combines the request with retrieved context. Cited answers go back to the user, while ticket updates and automation pass a human approval gate. Governance spans every layer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#42a5f5" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#1e88e5" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5 0 10Z" fill="#42a5f5"/>
+    </marker>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5 0 10Z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="50" y="60" font-size="26" font-weight="700" fill="#f1f5fb">A reference architecture for LLMs in IT ops</text>
+    <text x="50" y="88" font-size="15" fill="#a9b8cc">Ground the model in your own data, and put a person between the model and any change</text>
+
+    <!-- Sources -->
+    <text x="50" y="120" font-size="12" font-weight="700" fill="#42a5f5">YOUR IT DATA</text>
+    <g font-size="15" font-weight="700" fill="#f1f5fb">
+      <rect x="50" y="130" width="230" height="56" rx="10" fill="#132b4f" stroke="#42a5f5" stroke-opacity="0.6"/>
+      <text x="66" y="153">Tickets and ITSM history</text>
+      <text x="66" y="173" font-size="12" font-weight="400" fill="#a9b8cc">Past incidents and resolutions</text>
+
+      <rect x="50" y="198" width="230" height="56" rx="10" fill="#132b4f" stroke="#42a5f5" stroke-opacity="0.6"/>
+      <text x="66" y="221">Runbooks and knowledge base</text>
+      <text x="66" y="241" font-size="12" font-weight="400" fill="#a9b8cc">Approved procedures</text>
+
+      <rect x="50" y="266" width="230" height="56" rx="10" fill="#132b4f" stroke="#42a5f5" stroke-opacity="0.6"/>
+      <text x="66" y="289">CMDB and topology</text>
+      <text x="66" y="309" font-size="12" font-weight="400" fill="#a9b8cc">Services and dependencies</text>
+
+      <rect x="50" y="334" width="230" height="56" rx="10" fill="#132b4f" stroke="#42a5f5" stroke-opacity="0.6"/>
+      <text x="66" y="357">Logs, metrics and traces</text>
+      <text x="66" y="377" font-size="12" font-weight="400" fill="#a9b8cc">Live telemetry via OpenTelemetry</text>
+
+      <rect x="50" y="402" width="230" height="56" rx="10" fill="#132b4f" stroke="#42a5f5" stroke-opacity="0.6"/>
+      <text x="66" y="425">Network and UC configs</text>
+      <text x="66" y="445" font-size="12" font-weight="400" fill="#a9b8cc">Routers, firewalls, SBCs, call quality</text>
+    </g>
+
+    <!-- Source to retrieval connectors -->
+    <g fill="none" stroke="#42a5f5" stroke-opacity="0.7" stroke-width="1.5">
+      <path d="M280 158C310 158 310 280 336 285"/>
+      <path d="M280 226C310 226 310 288 336 290"/>
+      <path d="M280 294H336" marker-end="url(#arrow)"/>
+      <path d="M280 362C310 362 310 300 336 298"/>
+      <path d="M280 430C310 430 310 308 336 303"/>
+    </g>
+
+    <!-- Retrieval layer -->
+    <rect x="340" y="220" width="200" height="150" rx="12" fill="#173563" stroke="#42a5f5" stroke-width="2"/>
+    <text x="440" y="252" font-size="17" font-weight="700" fill="#f1f5fb" text-anchor="middle">Retrieval layer</text>
+    <g font-size="13" fill="#bfd0e4" text-anchor="middle">
+      <text x="440" y="284">Permission-aware search</text>
+      <text x="440" y="308">Vector and keyword index</text>
+      <text x="440" y="332">Freshness and citations</text>
+    </g>
+
+    <path d="M540 295H596" stroke="#42a5f5" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- User request -->
+    <rect x="600" y="128" width="190" height="44" rx="22" fill="#0b1f3a" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="695" y="155" font-size="14" font-weight="700" fill="#f1f5fb" text-anchor="middle">Engineer or user request</text>
+    <path d="M695 172V216" stroke="#42a5f5" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- LLM -->
+    <circle cx="695" cy="295" r="105" fill="url(#glow)"/>
+    <rect x="600" y="220" width="190" height="150" rx="12" fill="#1e88e5" fill-opacity="0.25" stroke="#42a5f5" stroke-width="2"/>
+    <text x="695" y="254" font-size="20" font-weight="700" fill="#f1f5fb" text-anchor="middle">LLM</text>
+    <g font-size="13" fill="#dbe7f5" text-anchor="middle">
+      <text x="695" y="284">Request + retrieved context</text>
+      <text x="695" y="308">Output and safety checks</text>
+      <text x="695" y="332">Scoped tool calls</text>
+    </g>
+
+    <!-- Direct answer path -->
+    <path d="M790 240C860 240 900 205 976 205" fill="none" stroke="#42a5f5" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Approval gate -->
+    <path d="M790 320H826" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrowCyan)"/>
+    <rect x="830" y="292" width="115" height="56" rx="28" fill="#0b1f3a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="887" y="316" font-size="13" font-weight="700" fill="#67e8f9" text-anchor="middle">Human</text>
+    <text x="887" y="333" font-size="13" font-weight="700" fill="#67e8f9" text-anchor="middle">approval</text>
+    <g fill="none" stroke="#22d3ee" stroke-width="2">
+      <path d="M945 312C960 312 960 305 976 305" marker-end="url(#arrowCyan)"/>
+      <path d="M945 330C962 330 960 400 976 400" marker-end="url(#arrowCyan)"/>
+    </g>
+
+    <!-- Outputs -->
+    <text x="980" y="160" font-size="12" font-weight="700" fill="#42a5f5">OUTCOMES</text>
+    <g font-size="15" font-weight="700" fill="#f1f5fb">
+      <rect x="980" y="172" width="185" height="66" rx="10" fill="#132b4f" stroke="#42a5f5" stroke-opacity="0.6"/>
+      <text x="996" y="200">Cited answer</text>
+      <text x="996" y="222" font-size="12" font-weight="400" fill="#a9b8cc">Returned to the user</text>
+
+      <rect x="980" y="272" width="185" height="66" rx="10" fill="#132b4f" stroke="#22d3ee" stroke-opacity="0.7"/>
+      <text x="996" y="300">ITSM update</text>
+      <text x="996" y="322" font-size="12" font-weight="400" fill="#a9b8cc">Ticket notes, routing, changes</text>
+
+      <rect x="980" y="367" width="185" height="66" rx="10" fill="#132b4f" stroke="#22d3ee" stroke-opacity="0.7"/>
+      <text x="996" y="395">Approved automation</text>
+      <text x="996" y="417" font-size="12" font-weight="400" fill="#a9b8cc">Ansible, Terraform, APIs</text>
+    </g>
+
+    <!-- Governance band -->
+    <rect x="50" y="490" width="1115" height="60" rx="12" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-opacity="0.6" stroke-dasharray="6 6"/>
+    <text x="607" y="516" font-size="15" font-weight="700" fill="#67e8f9" text-anchor="middle">Governance across every layer</text>
+    <text x="607" y="538" font-size="13" fill="#a9b8cc" text-anchor="middle">Role-based access and MFA  &#183;  secret and PII filtering  &#183;  prompt-injection defences  &#183;  audit logs  &#183;  evaluation sets  &#183;  cost and quality monitoring</text>
+  </g>
+</svg>

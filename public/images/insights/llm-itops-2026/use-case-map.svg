@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="title desc">
+  <title id="title">19 LLM use cases for IT operations, grouped by area</title>
+  <desc id="desc">Six groups of LLM use cases: service desk, incident and problem management, runbooks and knowledge, network UC and infrastructure, security and compliance, and automation and code. Each use case is colour-coded as low, medium or high risk.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="660" fill="url(#bg)"/>
+  <rect width="1200" height="660" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="45" y="62" font-size="26" font-weight="700" fill="#f1f5fb">19 LLM use cases for IT operations</text>
+    <text x="45" y="90" font-size="15" fill="#a9b8cc">Grouped by area and colour-coded by risk before human review</text>
+
+    <!-- Legend -->
+    <g font-size="14" fill="#a9b8cc">
+      <circle cx="842" cy="70" r="7" fill="#22c55e"/>
+      <text x="856" y="75">Low risk</text>
+      <circle cx="950" cy="70" r="7" fill="#f59e0b"/>
+      <text x="964" y="75">Medium risk</text>
+      <circle cx="1080" cy="70" r="7" fill="#ef4444"/>
+      <text x="1094" y="75">High risk</text>
+    </g>
+
+    <!-- Card 1: Service desk -->
+    <g>
+      <rect x="45" y="120" width="360" height="245" rx="14" fill="#132b4f" fill-opacity="0.75" stroke="#42a5f5" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="69" y="156" font-size="17" font-weight="700" fill="#f1f5fb">Service desk and end-user support</text>
+      <path d="M69 172H381" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="15" fill="#dbe7f5">
+        <circle cx="81" cy="205" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="81" y="209" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">01</text>
+        <text x="103" y="210">Ticket triage and routing</text>
+        <circle cx="81" cy="245" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="81" y="249" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">02</text>
+        <text x="103" y="250">Self-service IT assistant</text>
+        <circle cx="81" cy="285" r="12" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="81" y="289" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">03</text>
+        <text x="103" y="290">Reply drafting from the knowledge base</text>
+        <circle cx="81" cy="325" r="12" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="81" y="329" font-size="11" font-weight="700" fill="#f87171" text-anchor="middle">04</text>
+        <text x="103" y="330">Access and request fulfilment</text>
+      </g>
+    </g>
+
+    <!-- Card 2: Incident and problem -->
+    <g>
+      <rect x="435" y="120" width="360" height="245" rx="14" fill="#132b4f" fill-opacity="0.75" stroke="#42a5f5" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="459" y="156" font-size="17" font-weight="700" fill="#f1f5fb">Incident and problem management</text>
+      <path d="M459 172H771" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="15" fill="#dbe7f5">
+        <circle cx="471" cy="205" r="12" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="471" y="209" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">05</text>
+        <text x="493" y="210">Incident summaries and updates</text>
+        <circle cx="471" cy="245" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="471" y="249" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">06</text>
+        <text x="493" y="250">Log and trace analysis</text>
+        <circle cx="471" cy="285" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="471" y="289" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">07</text>
+        <text x="493" y="290">Root-cause hypotheses</text>
+        <circle cx="471" cy="325" r="12" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="471" y="329" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">08</text>
+        <text x="493" y="330">Postmortem drafting</text>
+      </g>
+    </g>
+
+    <!-- Card 3: Runbooks and knowledge -->
+    <g>
+      <rect x="825" y="120" width="330" height="245" rx="14" fill="#132b4f" fill-opacity="0.75" stroke="#42a5f5" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="849" y="156" font-size="17" font-weight="700" fill="#f1f5fb">Runbooks and knowledge</text>
+      <path d="M849 172H1131" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="15" fill="#dbe7f5">
+        <circle cx="861" cy="205" r="12" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="861" y="209" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">09</text>
+        <text x="883" y="210">Runbook generation</text>
+        <circle cx="861" cy="245" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="861" y="249" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">10</text>
+        <text x="883" y="250">IT knowledge search (RAG)</text>
+        <circle cx="861" cy="285" r="12" fill="#22c55e" fill-opacity="0.2" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="861" y="289" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">11</text>
+        <text x="883" y="290">Docs from configs and diagrams</text>
+      </g>
+    </g>
+
+    <!-- Card 4: Network, UC and infrastructure -->
+    <g>
+      <rect x="45" y="385" width="360" height="245" rx="14" fill="#132b4f" fill-opacity="0.75" stroke="#42a5f5" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="69" y="421" font-size="17" font-weight="700" fill="#f1f5fb">Network, UC and infrastructure</text>
+      <path d="M69 437H381" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="15" fill="#dbe7f5">
+        <circle cx="81" cy="470" r="12" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="81" y="474" font-size="11" font-weight="700" fill="#f87171" text-anchor="middle">12</text>
+        <text x="103" y="475">Network config generation and review</text>
+        <circle cx="81" cy="510" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="81" y="514" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">13</text>
+        <text x="103" y="515">Natural-language monitoring queries</text>
+        <circle cx="81" cy="550" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="81" y="554" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">14</text>
+        <text x="103" y="555">UC call-quality troubleshooting</text>
+        <circle cx="81" cy="590" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="81" y="594" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">15</text>
+        <text x="103" y="595">Change drafting and risk review</text>
+      </g>
+    </g>
+
+    <!-- Card 5: Security and compliance -->
+    <g>
+      <rect x="435" y="385" width="360" height="245" rx="14" fill="#132b4f" fill-opacity="0.75" stroke="#42a5f5" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="459" y="421" font-size="17" font-weight="700" fill="#f1f5fb">Security and compliance</text>
+      <path d="M459 437H771" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="15" fill="#dbe7f5">
+        <circle cx="471" cy="470" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="471" y="474" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">16</text>
+        <text x="493" y="475">Security alert triage and summaries</text>
+        <circle cx="471" cy="510" r="12" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="471" y="514" font-size="11" font-weight="700" fill="#f87171" text-anchor="middle">17</text>
+        <text x="493" y="515">Compliance evidence and policy Q&amp;A</text>
+      </g>
+    </g>
+
+    <!-- Card 6: Automation and code -->
+    <g>
+      <rect x="825" y="385" width="330" height="245" rx="14" fill="#132b4f" fill-opacity="0.75" stroke="#42a5f5" stroke-opacity="0.6" stroke-width="1.5"/>
+      <text x="849" y="421" font-size="17" font-weight="700" fill="#f1f5fb">Automation and code</text>
+      <path d="M849 437H1131" stroke="#42a5f5" stroke-opacity="0.35"/>
+      <g font-size="15" fill="#dbe7f5">
+        <circle cx="861" cy="470" r="12" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="861" y="474" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">18</text>
+        <text x="883" y="475">Scripts and infrastructure as code</text>
+        <circle cx="861" cy="510" r="12" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="861" y="514" font-size="11" font-weight="700" fill="#f87171" text-anchor="middle">19</text>
+        <text x="883" y="515">Agentic workflow automation</text>
+      </g>
+    </g>
+  </g>
+</svg>

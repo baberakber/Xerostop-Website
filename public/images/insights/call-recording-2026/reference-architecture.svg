@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">Reference architecture for enterprise compliance recording</title>
+  <desc id="desc">Six stages from left to right. Sources: Microsoft Teams, Webex and Zoom, SIP PBX and SBC, and the contact center. Capture: the Teams policy recording bot, SIPREC forking from the SBC, platform APIs, and mobile and chat capture. Record: notice and consent, pause and resume, AES-256 encryption and metadata tagging. Process: transcription, PII redaction, quality analytics and model-use controls. Preserve: WORM storage, retention rules, legal hold and data residency. Use: eDiscovery, compliance review, SIEM audit logs and data subject requests. Identity controls span the platform and TLS with SRTP protects every hop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#42a5f5"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="640" fill="url(#bg)"/>
+  <rect width="1200" height="640" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Reference architecture for compliance recording</text>
+    <text x="600" y="84" text-anchor="middle" font-size="15" fill="#a9b8cc">One capture policy, one evidential vault, every channel the regulator cares about</text>
+
+    <!-- Identity band -->
+    <rect x="424" y="106" width="736" height="30" rx="15" fill="#a78bfa" fill-opacity="0.12" stroke="#a78bfa" stroke-opacity="0.8"/>
+    <text x="792" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="#ddd6fe">Identity and access: SSO, MFA, least-privilege roles, every playback and export logged</text>
+
+    <!-- Connectors -->
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.8" marker-end="url(#arrow)">
+      <path d="M202 311H226"/>
+      <path d="M394 311H418"/>
+      <path d="M586 311H610"/>
+      <path d="M778 311H802"/>
+      <path d="M970 311H994"/>
+    </g>
+
+    <!-- Column 1: Sources -->
+    <rect x="40" y="156" width="162" height="310" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="121" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Sources</text>
+    <text x="121" y="208" text-anchor="middle" font-size="12" fill="#a9b8cc">Where calls happen</text>
+    <g fill="#0b1f3a" stroke="#1e88e5" stroke-opacity="0.7">
+      <rect x="53" y="228" width="136" height="40" rx="10"/>
+      <rect x="53" y="280" width="136" height="40" rx="10"/>
+      <rect x="53" y="332" width="136" height="40" rx="10"/>
+      <rect x="53" y="384" width="136" height="40" rx="10"/>
+    </g>
+    <g font-size="12.5" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="121" y="252">Microsoft Teams</text>
+      <text x="121" y="304">Webex / Zoom</text>
+      <text x="121" y="356">SIP PBX + SBC</text>
+      <text x="121" y="408">Contact center</text>
+    </g>
+
+    <!-- Column 2: Capture -->
+    <rect x="232" y="156" width="162" height="310" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="313" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Capture</text>
+    <text x="313" y="208" text-anchor="middle" font-size="12" fill="#a9b8cc">Policy, not opt-in</text>
+    <g fill="#0b1f3a" stroke="#1e88e5" stroke-opacity="0.7">
+      <rect x="245" y="228" width="136" height="40" rx="10"/>
+      <rect x="245" y="280" width="136" height="40" rx="10"/>
+      <rect x="245" y="332" width="136" height="40" rx="10"/>
+      <rect x="245" y="384" width="136" height="40" rx="10"/>
+    </g>
+    <g font-size="12.5" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="313" y="252">Teams policy bot</text>
+      <text x="313" y="304">SIPREC fork</text>
+      <text x="313" y="356">Platform APIs</text>
+      <text x="313" y="408">Mobile and chat</text>
+    </g>
+
+    <!-- Column 3: Record (highlighted) -->
+    <rect x="424" y="156" width="162" height="310" rx="14" fill="#1e88e5" fill-opacity="0.16" stroke="#42a5f5" stroke-width="1.8"/>
+    <text x="505" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Record</text>
+    <text x="505" y="208" text-anchor="middle" font-size="12" fill="#a9b8cc">Compliance recorder</text>
+    <g fill="#0b1f3a" stroke="#42a5f5" stroke-opacity="0.9">
+      <rect x="437" y="228" width="136" height="40" rx="10"/>
+      <rect x="437" y="280" width="136" height="40" rx="10"/>
+      <rect x="437" y="332" width="136" height="40" rx="10"/>
+      <rect x="437" y="384" width="136" height="40" rx="10"/>
+    </g>
+    <g font-size="12.5" font-weight="600" fill="#e3f2fd" text-anchor="middle">
+      <text x="505" y="252">Notice + consent</text>
+      <text x="505" y="304">Pause / resume</text>
+      <text x="505" y="356">AES-256 at rest</text>
+      <text x="505" y="408">Metadata tagging</text>
+    </g>
+
+    <!-- Column 4: Process -->
+    <rect x="616" y="156" width="162" height="310" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="697" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Process</text>
+    <text x="697" y="208" text-anchor="middle" font-size="12" fill="#a9b8cc">AI, under governance</text>
+    <g fill="#0b1f3a" stroke="#1e88e5" stroke-opacity="0.7">
+      <rect x="629" y="228" width="136" height="40" rx="10"/>
+      <rect x="629" y="280" width="136" height="40" rx="10"/>
+      <rect x="629" y="332" width="136" height="40" rx="10"/>
+      <rect x="629" y="384" width="136" height="40" rx="10"/>
+    </g>
+    <g font-size="12.5" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="697" y="252">Transcription</text>
+      <text x="697" y="304">PII redaction</text>
+      <text x="697" y="356">QA analytics</text>
+      <text x="697" y="408">Model-use controls</text>
+    </g>
+
+    <!-- Column 5: Preserve (violet accent) -->
+    <rect x="808" y="156" width="162" height="310" rx="14" fill="url(#card)" stroke="#a78bfa" stroke-opacity="0.8"/>
+    <text x="889" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Preserve</text>
+    <text x="889" y="208" text-anchor="middle" font-size="12" fill="#a9b8cc">Evidential vault</text>
+    <g fill="#a78bfa" fill-opacity="0.12" stroke="#a78bfa" stroke-opacity="0.8">
+      <rect x="821" y="228" width="136" height="40" rx="10"/>
+      <rect x="821" y="280" width="136" height="40" rx="10"/>
+      <rect x="821" y="332" width="136" height="40" rx="10"/>
+      <rect x="821" y="384" width="136" height="40" rx="10"/>
+    </g>
+    <g font-size="12.5" font-weight="600" fill="#ddd6fe" text-anchor="middle">
+      <text x="889" y="252">WORM storage</text>
+      <text x="889" y="304">Retention rules</text>
+      <text x="889" y="356">Legal hold</text>
+      <text x="889" y="408">Data residency</text>
+    </g>
+
+    <!-- Column 6: Use -->
+    <rect x="1000" y="156" width="160" height="310" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="1080" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Use</text>
+    <text x="1080" y="208" text-anchor="middle" font-size="12" fill="#a9b8cc">Who consumes it</text>
+    <g fill="#0b1f3a" stroke="#1e88e5" stroke-opacity="0.7">
+      <rect x="1012" y="228" width="136" height="40" rx="10"/>
+      <rect x="1012" y="280" width="136" height="40" rx="10"/>
+      <rect x="1012" y="332" width="136" height="40" rx="10"/>
+      <rect x="1012" y="384" width="136" height="40" rx="10"/>
+    </g>
+    <g font-size="12.5" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="1080" y="252">eDiscovery</text>
+      <text x="1080" y="304">Compliance review</text>
+      <text x="1080" y="356">SIEM audit logs</text>
+      <text x="1080" y="408">DSAR fulfilment</text>
+    </g>
+
+    <!-- Transport band -->
+    <path d="M40 496H1160" fill="none" stroke="#42a5f5" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.8"/>
+    <rect x="404" y="482" width="392" height="28" rx="14" fill="#07111f" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="600" y="501" text-anchor="middle" font-size="13" font-weight="600" fill="#bbdefb">TLS signalling and SRTP media on every hop</text>
+
+    <!-- Column labels -->
+    <g font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5" text-anchor="middle">
+      <text x="121" y="560">SOURCES</text>
+      <text x="313" y="560">CAPTURE</text>
+      <text x="505" y="560">RECORD</text>
+      <text x="697" y="560">PROCESS</text>
+      <text x="889" y="560">PRESERVE</text>
+      <text x="1080" y="560">USE</text>
+    </g>
+    <text x="600" y="604" text-anchor="middle" font-size="13" fill="#7f90a8">Capture is enforced by policy on the platform, so a user cannot forget, or decide not, to record.</text>
+  </g>
+</svg>

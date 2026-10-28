@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="title desc">
+  <title id="title">The seven-step Cisco Catalyst SD-WAN migration sequence</title>
+  <desc id="desc">Prepare: set up Smart and Virtual Accounts, deploy control components, build configuration and policies. Migrate: data centers first, then regional hubs, then branches. Retire: decommission legacy routers. Verify routing after every step.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="440" fill="url(#bg)"/>
+  <rect width="1200" height="440" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">The seven-step migration sequence</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">The same path applies to greenfield, legacy MPLS and IWAN networks</text>
+
+    <!-- Cards -->
+    <g stroke-opacity="0.6">
+      <rect x="46" y="124" width="148" height="196" rx="14" fill="url(#card)" stroke="#42a5f5"/>
+      <rect x="206" y="124" width="148" height="196" rx="14" fill="url(#card)" stroke="#42a5f5"/>
+      <rect x="366" y="124" width="148" height="196" rx="14" fill="url(#card)" stroke="#42a5f5"/>
+      <rect x="526" y="124" width="148" height="196" rx="14" fill="url(#card)" stroke="#4ade80" stroke-opacity="1" stroke-width="1.5"/>
+      <rect x="686" y="124" width="148" height="196" rx="14" fill="url(#card)" stroke="#42a5f5"/>
+      <rect x="846" y="124" width="148" height="196" rx="14" fill="url(#card)" stroke="#42a5f5"/>
+      <rect x="1006" y="124" width="148" height="196" rx="14" fill="url(#card)" stroke="#42a5f5"/>
+    </g>
+
+    <!-- Arrows -->
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M196 222l6 0M199 217l4 5-4 5"/>
+      <path d="M356 222l6 0M359 217l4 5-4 5"/>
+      <path d="M516 222l6 0M519 217l4 5-4 5"/>
+      <path d="M676 222l6 0M679 217l4 5-4 5"/>
+      <path d="M836 222l6 0M839 217l4 5-4 5"/>
+      <path d="M996 222l6 0M999 217l4 5-4 5"/>
+    </g>
+
+    <!-- Numbers -->
+    <g>
+      <circle cx="120" cy="160" r="18" fill="#1e88e5"/>
+      <circle cx="280" cy="160" r="18" fill="#1e88e5"/>
+      <circle cx="440" cy="160" r="18" fill="#1e88e5"/>
+      <circle cx="600" cy="160" r="18" fill="#22c55e"/>
+      <circle cx="760" cy="160" r="18" fill="#1e88e5"/>
+      <circle cx="920" cy="160" r="18" fill="#1e88e5"/>
+      <circle cx="1080" cy="160" r="18" fill="#1e88e5"/>
+    </g>
+    <g font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">
+      <text x="120" y="166">1</text>
+      <text x="280" y="166">2</text>
+      <text x="440" y="166">3</text>
+      <text x="600" y="166">4</text>
+      <text x="760" y="166">5</text>
+      <text x="920" y="166">6</text>
+      <text x="1080" y="166">7</text>
+    </g>
+
+    <!-- Titles -->
+    <g font-size="15" font-weight="700" fill="#f1f5fb" text-anchor="middle">
+      <text x="120" y="210">Smart and</text>
+      <text x="120" y="230">Virtual Account</text>
+      <text x="280" y="210">Deploy control</text>
+      <text x="280" y="230">components</text>
+      <text x="440" y="210">Build config</text>
+      <text x="440" y="230">and policies</text>
+      <text x="600" y="210">Migrate data</text>
+      <text x="600" y="230">centers first</text>
+      <text x="760" y="210">Migrate</text>
+      <text x="760" y="230">regional hubs</text>
+      <text x="920" y="210">Migrate</text>
+      <text x="920" y="230">branches</text>
+      <text x="1080" y="210">Retire legacy</text>
+      <text x="1080" y="230">routers</text>
+    </g>
+
+    <!-- Descriptions -->
+    <g font-size="12" fill="#a9b8cc" text-anchor="middle">
+      <text x="120" y="264">Device allow-list</text>
+      <text x="120" y="282">and Plug and Play</text>
+      <text x="280" y="264">Cloud-delivered</text>
+      <text x="280" y="282">or on-premises</text>
+      <text x="440" y="264">Config groups,</text>
+      <text x="440" y="282">tested in a lab</text>
+      <text x="600" y="264">Transit between</text>
+      <text x="600" y="282">old and new sites</text>
+      <text x="760" y="264">Regional breakout</text>
+      <text x="760" y="282">and shared services</text>
+      <text x="920" y="264">Region by region,</text>
+      <text x="920" y="282">one cutover each</text>
+      <text x="1080" y="264">DC legacy routers</text>
+      <text x="1080" y="282">and IWAN controllers</text>
+    </g>
+
+    <!-- Phase bands -->
+    <g font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+      <rect x="46" y="338" width="468" height="30" rx="15" fill="#1e88e5" fill-opacity="0.12" stroke="#1e88e5" stroke-opacity="0.6"/>
+      <text x="280" y="358" fill="#90caf9">PREPARE</text>
+      <rect x="526" y="338" width="468" height="30" rx="15" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80" stroke-opacity="0.7"/>
+      <text x="760" y="358" fill="#86efac">MIGRATE</text>
+      <rect x="1006" y="338" width="148" height="30" rx="15" fill="#1e88e5" fill-opacity="0.12" stroke="#1e88e5" stroke-opacity="0.6"/>
+      <text x="1080" y="358" fill="#90caf9">RETIRE</text>
+    </g>
+
+    <text x="600" y="408" text-anchor="middle" font-size="14" fill="#a9b8cc">Verify existing and new routing flows after every step before moving on</text>
+  </g>
+</svg>

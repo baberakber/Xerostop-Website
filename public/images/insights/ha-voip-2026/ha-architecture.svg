@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">Reference high-availability voice architecture</title>
+  <desc id="desc">Sites connect over dual WAN and SD-WAN to geo-redundant SBC pairs in two regions, which connect to two carriers and the PSTN. A cloud UC platform connects to both regions, and a branch survivability appliance with a local PSTN trunk keeps the branch calling if the cloud is unreachable.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="640" fill="url(#bg)"/>
+  <rect width="1200" height="640" fill="url(#grid)"/>
+
+  <!-- Connectors -->
+  <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.7">
+    <path d="M230 250H290M230 290H290"/>
+    <path d="M230 400H290M230 440H290"/>
+    <path d="M460 275H520M460 445H520"/>
+    <path d="M460 300L520 420M460 420L520 300" stroke-opacity="0.35"/>
+    <path d="M740 275H800M740 445H800"/>
+    <path d="M740 300L800 430M740 420L800 290" stroke-opacity="0.35"/>
+    <path d="M960 275H1010M960 445H1010"/>
+  </g>
+  <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-dasharray="5 6" stroke-opacity="0.85">
+    <path d="M600 172V210"/>
+    <path d="M770 172V470H740"/>
+  </g>
+  <path d="M135 510V542H1085V510" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Reference high-availability voice architecture</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">At least two independent paths at every layer, from the user to the PSTN</text>
+
+    <!-- Cloud UC platform -->
+    <rect x="460" y="114" width="340" height="58" rx="14" fill="#1e88e5" fill-opacity="0.18" stroke="#42a5f5" stroke-opacity="0.9" stroke-width="1.5"/>
+    <g transform="translate(482 128) scale(1.25)" fill="none" stroke="#42a5f5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+    </g>
+    <text x="524" y="139" font-size="16" font-weight="700" fill="#f1f5fb">Cloud UC platform</text>
+    <text x="524" y="160" font-size="13" fill="#a9b8cc">Teams, Webex or Zoom, multi-region</text>
+
+    <!-- Sites -->
+    <rect x="40" y="210" width="190" height="110" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="60" y="242" font-size="16" font-weight="700" fill="#f1f5fb">Headquarters</text>
+    <text x="60" y="264" font-size="13" fill="#a9b8cc">Users, phones, rooms</text>
+    <rect x="58" y="280" width="154" height="28" rx="14" fill="#0b1f3a" stroke="#1e88e5" stroke-opacity="0.7"/>
+    <text x="135" y="299" text-anchor="middle" font-size="12" font-weight="600" fill="#bbdefb">UPS + PoE switches</text>
+
+    <rect x="40" y="360" width="190" height="150" rx="14" fill="url(#card)" stroke="#a78bfa" stroke-opacity="0.7"/>
+    <text x="60" y="392" font-size="16" font-weight="700" fill="#f1f5fb">Branch site</text>
+    <text x="60" y="414" font-size="13" fill="#a9b8cc">Users and phones</text>
+    <rect x="52" y="428" width="166" height="28" rx="14" fill="#a78bfa" fill-opacity="0.15" stroke="#a78bfa"/>
+    <text x="135" y="447" text-anchor="middle" font-size="12" font-weight="600" fill="#ddd6fe">Survivability appliance</text>
+    <rect x="52" y="466" width="166" height="28" rx="14" fill="#0b1f3a" stroke="#a78bfa" stroke-opacity="0.8"/>
+    <text x="135" y="485" text-anchor="middle" font-size="12" font-weight="600" fill="#ddd6fe">Local PSTN trunk</text>
+
+    <!-- Network -->
+    <rect x="290" y="210" width="170" height="300" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="375" y="242" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Dual WAN</text>
+    <text x="375" y="264" text-anchor="middle" font-size="13" fill="#a9b8cc">SD-WAN path steering</text>
+    <g fill="#0b1f3a" stroke="#1e88e5" stroke-opacity="0.7">
+      <rect x="305" y="284" width="140" height="30" rx="15"/>
+      <rect x="305" y="330" width="140" height="30" rx="15"/>
+      <rect x="305" y="376" width="140" height="30" rx="15"/>
+      <rect x="305" y="422" width="140" height="30" rx="15"/>
+    </g>
+    <g font-size="12" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="375" y="304">ISP A</text>
+      <text x="375" y="350">ISP B (diverse path)</text>
+      <text x="375" y="396">LTE / 5G backup</text>
+      <text x="375" y="442">QoS: DSCP EF 46</text>
+    </g>
+
+    <!-- SBC regions -->
+    <rect x="520" y="210" width="220" height="130" rx="14" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="540" y="242" font-size="16" font-weight="700" fill="#f1f5fb">Region A</text>
+    <text x="540" y="264" font-size="13" fill="#a9b8cc">SBC HA pair (1+1)</text>
+    <rect x="536" y="284" width="88" height="34" rx="10" fill="#1e88e5" fill-opacity="0.22" stroke="#42a5f5"/>
+    <rect x="636" y="284" width="88" height="34" rx="10" fill="#1e88e5" fill-opacity="0.22" stroke="#42a5f5"/>
+    <path d="M624 301H636" stroke="#42a5f5" stroke-width="2"/>
+    <text x="580" y="306" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">SBC 1</text>
+    <text x="680" y="306" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">SBC 2</text>
+
+    <rect x="520" y="380" width="220" height="130" rx="14" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="540" y="412" font-size="16" font-weight="700" fill="#f1f5fb">Region B</text>
+    <text x="540" y="434" font-size="13" fill="#a9b8cc">SBC HA pair (1+1)</text>
+    <rect x="536" y="454" width="88" height="34" rx="10" fill="#1e88e5" fill-opacity="0.22" stroke="#42a5f5"/>
+    <rect x="636" y="454" width="88" height="34" rx="10" fill="#1e88e5" fill-opacity="0.22" stroke="#42a5f5"/>
+    <path d="M624 471H636" stroke="#42a5f5" stroke-width="2"/>
+    <text x="580" y="476" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">SBC 3</text>
+    <text x="680" y="476" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">SBC 4</text>
+
+    <!-- Carriers -->
+    <rect x="800" y="235" width="160" height="80" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="880" y="268" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Carrier 1</text>
+    <text x="880" y="290" text-anchor="middle" font-size="13" fill="#a9b8cc">Primary SIP trunk</text>
+    <rect x="800" y="405" width="160" height="80" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <text x="880" y="438" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Carrier 2</text>
+    <text x="880" y="460" text-anchor="middle" font-size="13" fill="#a9b8cc">Backup SIP trunk</text>
+
+    <!-- PSTN -->
+    <rect x="1010" y="210" width="150" height="300" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.5"/>
+    <circle cx="1085" cy="330" r="34" fill="#1e88e5" fill-opacity="0.15" stroke="#42a5f5" stroke-opacity="0.6"/>
+    <g transform="translate(1067 312) scale(1.5)" fill="none" stroke="#42a5f5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </g>
+    <text x="1085" y="396" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">PSTN</text>
+    <text x="1085" y="418" text-anchor="middle" font-size="13" fill="#a9b8cc">Public phone</text>
+    <text x="1085" y="436" text-anchor="middle" font-size="13" fill="#a9b8cc">network</text>
+
+    <!-- Survivability path label -->
+    <rect x="404" y="528" width="392" height="28" rx="14" fill="#07111f" stroke="#a78bfa" stroke-opacity="0.8"/>
+    <text x="600" y="547" text-anchor="middle" font-size="13" font-weight="600" fill="#ddd6fe">Branch keeps calling over its local trunk if the cloud is down</text>
+
+    <!-- Column labels -->
+    <g font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5" text-anchor="middle">
+      <text x="135" y="600">SITES</text>
+      <text x="375" y="600">NETWORK</text>
+      <text x="630" y="600">SBC LAYER</text>
+      <text x="880" y="600">CARRIERS</text>
+      <text x="1085" y="600">PSTN</text>
+    </g>
+  </g>
+</svg>

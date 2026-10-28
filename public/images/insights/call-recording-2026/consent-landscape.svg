@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">The global call recording consent landscape in 2026</title>
+  <desc id="desc">Eight regions compared by consent model. The US federal rule and Canada are one-party. Nine US states require all-party consent. The EU and Brazil require a lawful basis under data protection law. The UK, Australia and APAC markets require notice, with Australia varying by state.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#dbe5f1" stroke-width="1" stroke-opacity="0.7"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0b1f3a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="640" fill="#f4f7fb"/>
+  <rect width="1200" height="640" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="54" text-anchor="middle" font-size="26" font-weight="700" fill="#0b1f3a">The global consent landscape at a glance</text>
+    <text x="600" y="86" text-anchor="middle" font-size="15" fill="#475569">When a call crosses borders, design for the strictest party on the line</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(40 120)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#dbe5f1"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#1e88e5"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">United States (federal)</text>
+      <rect x="20" y="62" width="112" height="26" rx="13" fill="#1e88e5" fill-opacity="0.1" stroke="#1e88e5"/>
+      <text x="76" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#1565c0">ONE-PARTY</text>
+      <text x="20" y="116" font-size="13" fill="#475569">ECPA, 18 U.S.C. 2511(2)(d)</text>
+      <text x="20" y="136" font-size="13" fill="#475569">Sets the floor, not the ceiling</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">Stricter state law always wins</text>
+    </g>
+
+    <g transform="translate(324 120)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#c4b5fd"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#7c3aed"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">US all-party states</text>
+      <rect x="20" y="62" width="112" height="26" rx="13" fill="#7c3aed" fill-opacity="0.1" stroke="#7c3aed"/>
+      <text x="76" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#6d28d9">ALL-PARTY</text>
+      <text x="20" y="116" font-size="13" fill="#475569">CA, FL, IL, MD, MA, MT,</text>
+      <text x="20" y="136" font-size="13" fill="#475569">NH, PA, WA</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">Mixed rules: CT, DE, MI, NV</text>
+    </g>
+
+    <g transform="translate(608 120)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#dbe5f1"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#0b1f3a"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">European Union</text>
+      <rect x="20" y="62" width="132" height="26" rx="13" fill="#0b1f3a" fill-opacity="0.07" stroke="#0b1f3a"/>
+      <text x="86" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#0b1f3a">LAWFUL BASIS</text>
+      <text x="20" y="116" font-size="13" fill="#475569">GDPR Articles 5, 6 and 13</text>
+      <text x="20" y="136" font-size="13" fill="#475569">Plus national telecoms law</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">Fines up to 4% of global turnover</text>
+    </g>
+
+    <g transform="translate(892 120)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#dbe5f1"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#0b1f3a"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">United Kingdom</text>
+      <rect x="20" y="62" width="150" height="26" rx="13" fill="#0b1f3a" fill-opacity="0.07" stroke="#0b1f3a"/>
+      <text x="95" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#0b1f3a">NOTICE + BASIS</text>
+      <text x="20" y="116" font-size="13" fill="#475569">UK GDPR, PECR and the</text>
+      <text x="20" y="136" font-size="13" fill="#475569">Interception by Businesses Regs</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">FCA firms must also record</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(40 344)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#dbe5f1"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#1e88e5"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">Canada</text>
+      <rect x="20" y="62" width="176" height="26" rx="13" fill="#1e88e5" fill-opacity="0.1" stroke="#1e88e5"/>
+      <text x="108" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#1565c0">ONE-PARTY + NOTICE</text>
+      <text x="20" y="116" font-size="13" fill="#475569">Criminal Code s.184, PIPEDA</text>
+      <text x="20" y="136" font-size="13" fill="#475569">and provincial privacy acts</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">State the purpose up front</text>
+    </g>
+
+    <g transform="translate(324 344)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#c4b5fd"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#7c3aed"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">Australia</text>
+      <rect x="20" y="62" width="160" height="26" rx="13" fill="#7c3aed" fill-opacity="0.1" stroke="#7c3aed"/>
+      <text x="100" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#6d28d9">VARIES BY STATE</text>
+      <text x="20" y="116" font-size="13" fill="#475569">TIA Act 1979 plus state</text>
+      <text x="20" y="136" font-size="13" fill="#475569">surveillance devices acts</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">Notify before recording starts</text>
+    </g>
+
+    <g transform="translate(608 344)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#dbe5f1"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#0b1f3a"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">Brazil and LATAM</text>
+      <rect x="20" y="62" width="132" height="26" rx="13" fill="#0b1f3a" fill-opacity="0.07" stroke="#0b1f3a"/>
+      <text x="86" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#0b1f3a">LAWFUL BASIS</text>
+      <text x="20" y="116" font-size="13" fill="#475569">LGPD (Brazil), plus Mexico</text>
+      <text x="20" y="136" font-size="13" fill="#475569">and Argentina privacy laws</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">GDPR-style transparency</text>
+    </g>
+
+    <g transform="translate(892 344)" filter="url(#shadow)">
+      <rect width="268" height="206" rx="14" fill="#ffffff" stroke="#dbe5f1"/>
+      <rect x="0" y="22" width="4" height="34" rx="2" fill="#0b1f3a"/>
+      <text x="20" y="46" font-size="18" font-weight="700" fill="#0b1f3a">APAC</text>
+      <rect x="20" y="62" width="150" height="26" rx="13" fill="#0b1f3a" fill-opacity="0.07" stroke="#0b1f3a"/>
+      <text x="95" y="80" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="1" fill="#0b1f3a">NOTICE + BASIS</text>
+      <text x="20" y="116" font-size="13" fill="#475569">Singapore PDPA, Japan APPI,</text>
+      <text x="20" y="136" font-size="13" fill="#475569">India DPDP Act</text>
+      <path d="M20 154H248" stroke="#dbe5f1"/>
+      <text x="20" y="180" font-size="12.5" font-weight="600" fill="#0b1f3a">Disclose purpose of collection</text>
+    </g>
+
+    <!-- Legend -->
+    <g font-size="13" fill="#475569">
+      <circle cx="300" cy="596" r="6" fill="#1e88e5"/>
+      <text x="314" y="601">One-party consent</text>
+      <circle cx="470" cy="596" r="6" fill="#7c3aed"/>
+      <text x="484" y="601">All-party or stricter rules</text>
+      <circle cx="680" cy="596" r="6" fill="#0b1f3a"/>
+      <text x="694" y="601">Notice and lawful basis under privacy law</text>
+    </g>
+  </g>
+</svg>

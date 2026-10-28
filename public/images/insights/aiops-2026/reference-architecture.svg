@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">Reference architecture for agentic AIOps</title>
+  <desc id="desc">Five stacked layers from telemetry sources, data foundation, correlation and machine learning, AI agents, up to automation and ITSM, with governance and guardrails spanning all layers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="640" fill="url(#bg)"/>
+  <rect width="1200" height="640" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="62" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Reference architecture for agentic AIOps</text>
+    <text x="600" y="94" text-anchor="middle" font-size="15" fill="#a9b8cc">Data flows up from every source; governed actions flow back down</text>
+
+    <!-- Layer bands -->
+    <g stroke="#42a5f5" stroke-width="1.5">
+      <rect x="40" y="130" width="940" height="70" rx="14" fill="#1e88e5" fill-opacity="0.16" stroke-opacity="0.5"/>
+      <rect x="40" y="214" width="940" height="70" rx="14" fill="#1e88e5" fill-opacity="0.24" stroke-opacity="0.95"/>
+      <rect x="40" y="298" width="940" height="70" rx="14" fill="#1e88e5" fill-opacity="0.13" stroke-opacity="0.5"/>
+      <rect x="40" y="382" width="940" height="70" rx="14" fill="#1e88e5" fill-opacity="0.10" stroke-opacity="0.5"/>
+      <rect x="40" y="466" width="940" height="70" rx="14" fill="#1e88e5" fill-opacity="0.07" stroke-opacity="0.5"/>
+    </g>
+
+    <!-- Flow chevrons between layers -->
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M296 211l6-5 6 5"/>
+      <path d="M296 295l6-5 6 5"/>
+      <path d="M296 379l6-5 6 5"/>
+      <path d="M296 463l6-5 6 5"/>
+    </g>
+
+    <!-- Layer labels -->
+    <g>
+      <circle cx="72" cy="165" r="14" fill="#1e88e5"/>
+      <text x="72" y="170" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">5</text>
+      <text x="96" y="161" font-size="17" font-weight="700" fill="#f1f5fb">Automation &amp; ITSM</text>
+      <text x="96" y="182" font-size="13" fill="#a9b8cc">Executes and records actions</text>
+
+      <circle cx="72" cy="249" r="14" fill="#1e88e5"/>
+      <text x="72" y="254" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4</text>
+      <text x="96" y="245" font-size="17" font-weight="700" fill="#f1f5fb">AI agents</text>
+      <text x="96" y="266" font-size="13" fill="#a9b8cc">Investigate, explain, propose</text>
+
+      <circle cx="72" cy="333" r="14" fill="#1e88e5"/>
+      <text x="72" y="338" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3</text>
+      <text x="96" y="329" font-size="17" font-weight="700" fill="#f1f5fb">Correlation &amp; ML</text>
+      <text x="96" y="350" font-size="13" fill="#a9b8cc">Turns signals into incidents</text>
+
+      <circle cx="72" cy="417" r="14" fill="#1e88e5"/>
+      <text x="72" y="422" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2</text>
+      <text x="96" y="413" font-size="17" font-weight="700" fill="#f1f5fb">Data foundation</text>
+      <text x="96" y="434" font-size="13" fill="#a9b8cc">One consistent, enriched model</text>
+
+      <circle cx="72" cy="501" r="14" fill="#1e88e5"/>
+      <text x="72" y="506" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+      <text x="96" y="497" font-size="17" font-weight="700" fill="#f1f5fb">Telemetry sources</text>
+      <text x="96" y="518" font-size="13" fill="#a9b8cc">Everything that emits signals</text>
+    </g>
+
+    <!-- Chips -->
+    <g fill="#0b1f3a" fill-opacity="0.65" stroke="#1e88e5" stroke-opacity="0.7">
+      <rect x="320" y="148" width="152" height="34" rx="17"/>
+      <rect x="482" y="148" width="152" height="34" rx="17"/>
+      <rect x="644" y="148" width="152" height="34" rx="17"/>
+      <rect x="806" y="148" width="152" height="34" rx="17"/>
+
+      <rect x="320" y="232" width="152" height="34" rx="17"/>
+      <rect x="482" y="232" width="152" height="34" rx="17"/>
+      <rect x="644" y="232" width="152" height="34" rx="17"/>
+      <rect x="806" y="232" width="152" height="34" rx="17"/>
+
+      <rect x="320" y="316" width="152" height="34" rx="17"/>
+      <rect x="482" y="316" width="152" height="34" rx="17"/>
+      <rect x="644" y="316" width="152" height="34" rx="17"/>
+      <rect x="806" y="316" width="152" height="34" rx="17"/>
+
+      <rect x="320" y="400" width="152" height="34" rx="17"/>
+      <rect x="482" y="400" width="152" height="34" rx="17"/>
+      <rect x="644" y="400" width="152" height="34" rx="17"/>
+      <rect x="806" y="400" width="152" height="34" rx="17"/>
+
+      <rect x="320" y="484" width="152" height="34" rx="17"/>
+      <rect x="482" y="484" width="152" height="34" rx="17"/>
+      <rect x="644" y="484" width="152" height="34" rx="17"/>
+      <rect x="806" y="484" width="152" height="34" rx="17"/>
+    </g>
+    <g font-size="13" font-weight="600" fill="#bbdefb" text-anchor="middle">
+      <text x="396" y="170">Ansible</text>
+      <text x="558" y="170">Terraform</text>
+      <text x="720" y="170">Cloud APIs</text>
+      <text x="882" y="170">ServiceNow</text>
+
+      <text x="396" y="254">Investigation agent</text>
+      <text x="558" y="254">Remediation agent</text>
+      <text x="720" y="254">MCP tool access</text>
+      <text x="882" y="254">Runbook knowledge</text>
+
+      <text x="396" y="338">Baselining</text>
+      <text x="558" y="338">Anomaly detection</text>
+      <text x="720" y="338">Event correlation</text>
+      <text x="882" y="338">Change correlation</text>
+
+      <text x="396" y="422">OpenTelemetry</text>
+      <text x="558" y="422">Logs, metrics, traces</text>
+      <text x="720" y="422">CMDB &amp; topology</text>
+      <text x="882" y="422">Streaming pipeline</text>
+
+      <text x="396" y="506">Apps &amp; services</text>
+      <text x="558" y="506">Infra &amp; cloud</text>
+      <text x="720" y="506">Network &amp; SD-WAN</text>
+      <text x="882" y="506">UC platforms</text>
+    </g>
+
+    <!-- Governance bar -->
+    <rect x="1004" y="130" width="156" height="406" rx="14" fill="#22d3ee" fill-opacity="0.07" stroke="#22d3ee" stroke-opacity="0.65" stroke-width="1.5"/>
+    <text x="1082" y="170" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5fb">Governance</text>
+    <text x="1082" y="192" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5fb">&amp; guardrails</text>
+    <g font-size="14" fill="#a9b8cc">
+      <circle cx="1028" cy="245" r="4" fill="#22d3ee"/>
+      <text x="1042" y="250">Least privilege</text>
+      <circle cx="1028" cy="289" r="4" fill="#22d3ee"/>
+      <text x="1042" y="294">Approval gates</text>
+      <circle cx="1028" cy="333" r="4" fill="#22d3ee"/>
+      <text x="1042" y="338">Audit logs</text>
+      <circle cx="1028" cy="377" r="4" fill="#22d3ee"/>
+      <text x="1042" y="382">Rollback</text>
+      <circle cx="1028" cy="421" r="4" fill="#22d3ee"/>
+      <text x="1042" y="426">Agent monitoring</text>
+      <circle cx="1028" cy="465" r="4" fill="#22d3ee"/>
+      <text x="1042" y="470">Vendor SLAs</text>
+    </g>
+
+    <text x="600" y="590" text-anchor="middle" font-size="14" fill="#7f90a8">Open standards such as OpenTelemetry and MCP keep data and agents portable across vendors.</text>
+  </g>
+</svg>

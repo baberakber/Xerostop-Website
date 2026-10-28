@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">Three data center firewall deployment models</title>
+  <desc id="desc">A transparent firewall bridges two halves of the same subnet at Layer 2 using a bridge group and a BVI. A routed firewall is the Layer 3 default gateway between segments such as web and database. With service insertion, the fabric uses policy-based redirect to steer selected flows to a one-arm firewall while all other traffic stays in the fabric.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Three ways to put a firewall in the data path</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">Choose by how much you can change addressing, and how much traffic must be inspected</text>
+
+    <!-- Panels -->
+    <g stroke="#42a5f5" stroke-opacity="0.55">
+      <rect x="40" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+      <rect x="420" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+      <rect x="800" y="116" width="360" height="474" rx="16" fill="url(#card)"/>
+    </g>
+
+    <g>
+      <text x="64" y="152" font-size="19" font-weight="700" fill="#f1f5fb">Transparent (Layer 2)</text>
+      <text x="64" y="175" font-size="13" fill="#a9b8cc">A bump in the wire, same subnet</text>
+      <text x="444" y="152" font-size="19" font-weight="700" fill="#f1f5fb">Routed (Layer 3)</text>
+      <text x="444" y="175" font-size="13" fill="#a9b8cc">The firewall is the gateway</text>
+      <text x="824" y="152" font-size="19" font-weight="700" fill="#f1f5fb">Service insertion</text>
+      <text x="824" y="175" font-size="13" fill="#a9b8cc">The fabric steers selected flows</text>
+    </g>
+
+    <!-- Panel 1: transparent -->
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.75">
+      <path d="M220 234V250M220 290V306"/>
+    </g>
+    <rect x="110" y="200" width="220" height="34" rx="10" fill="#0b1f3a" stroke="#1e88e5"/>
+    <text x="220" y="222" text-anchor="middle" font-size="13" font-weight="600" fill="#bbdefb">Gateway 10.1.3.254</text>
+    <rect x="90" y="250" width="260" height="40" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="220" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">Firewall: bridge group 1</text>
+    <text x="220" y="284" text-anchor="middle" font-size="11" fill="#a9b8cc">BVI 1 = 10.1.3.1 (management only)</text>
+    <rect x="110" y="306" width="220" height="34" rx="10" fill="#0b1f3a" stroke="#1e88e5"/>
+    <text x="220" y="328" text-anchor="middle" font-size="13" font-weight="600" fill="#bbdefb">Servers 10.1.3.0/24</text>
+
+    <!-- Panel 2: routed -->
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.75">
+      <path d="M600 234V250"/>
+      <path d="M560 290L510 306M640 290L690 306"/>
+    </g>
+    <rect x="490" y="200" width="220" height="34" rx="10" fill="#0b1f3a" stroke="#1e88e5"/>
+    <text x="600" y="222" text-anchor="middle" font-size="13" font-weight="600" fill="#bbdefb">Core / border leaf</text>
+    <rect x="470" y="250" width="260" height="40" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="600" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">Firewall: default gateway</text>
+    <text x="600" y="284" text-anchor="middle" font-size="11" fill="#a9b8cc">One interface or subinterface per zone</text>
+    <rect x="444" y="306" width="140" height="34" rx="10" fill="#0b1f3a" stroke="#1e88e5"/>
+    <text x="514" y="328" text-anchor="middle" font-size="12" font-weight="600" fill="#bbdefb">Web 10.1.10.0/24</text>
+    <rect x="616" y="306" width="140" height="34" rx="10" fill="#0b1f3a" stroke="#1e88e5"/>
+    <text x="686" y="328" text-anchor="middle" font-size="12" font-weight="600" fill="#bbdefb">DB 10.1.20.0/24</text>
+
+    <!-- Panel 3: service insertion -->
+    <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.75">
+      <path d="M894 290V306M1066 290V306"/>
+    </g>
+    <path d="M980 234V250" fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="5 5"/>
+    <rect x="890" y="200" width="180" height="34" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#4ade80"/>
+    <text x="980" y="222" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">Firewall (one-arm)</text>
+    <rect x="824" y="250" width="312" height="40" rx="10" fill="#1e88e5" fill-opacity="0.14" stroke="#42a5f5"/>
+    <text x="980" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5fb">Leaf switches (ACI or EVPN fabric)</text>
+    <text x="980" y="284" text-anchor="middle" font-size="11" fill="#a9b8cc">Policy-based redirect for chosen flows</text>
+    <rect x="824" y="306" width="140" height="34" rx="10" fill="#0b1f3a" stroke="#1e88e5"/>
+    <text x="894" y="328" text-anchor="middle" font-size="12" font-weight="600" fill="#bbdefb">Web ESG</text>
+    <rect x="996" y="306" width="140" height="34" rx="10" fill="#0b1f3a" stroke="#1e88e5"/>
+    <text x="1066" y="328" text-anchor="middle" font-size="12" font-weight="600" fill="#bbdefb">DB ESG</text>
+    <text x="1036" y="246" font-size="11" fill="#86efac">redirect</text>
+
+    <!-- Attribute labels -->
+    <g font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5">
+      <text x="64" y="384">STRENGTHS</text>
+      <text x="444" y="384">STRENGTHS</text>
+      <text x="824" y="384">STRENGTHS</text>
+      <text x="64" y="454">WATCH OUT FOR</text>
+      <text x="444" y="454">WATCH OUT FOR</text>
+      <text x="824" y="454">WATCH OUT FOR</text>
+      <text x="64" y="524">BEST FOR</text>
+      <text x="444" y="524">BEST FOR</text>
+      <text x="824" y="524">BEST FOR</text>
+    </g>
+
+    <g font-size="14" fill="#a9b8cc">
+      <text x="64" y="406">No re-addressing; hosts and</text>
+      <text x="64" y="424">routers keep their gateways</text>
+      <text x="444" y="406">Clear zone boundaries; full</text>
+      <text x="444" y="424">routing, NAT and VPN features</text>
+      <text x="824" y="406">Inspect only the flows that</text>
+      <text x="824" y="424">matter; scale firewalls out</text>
+
+      <text x="64" y="476">No dynamic routing; plan for</text>
+      <text x="64" y="494">BPDUs, ARP and failover</text>
+      <text x="444" y="476">Hairpinning all east-west</text>
+      <text x="444" y="494">traffic turns it into a bottleneck</text>
+      <text x="824" y="476">Return traffic must be symmetric;</text>
+      <text x="824" y="494">track firewall health</text>
+
+      <text x="64" y="546">Adding inspection to a legacy</text>
+      <text x="64" y="564">segment without a change window</text>
+      <text x="444" y="546">VRF, tenant and DMZ</text>
+      <text x="444" y="564">boundaries</text>
+      <text x="824" y="546">Selective east-west inspection</text>
+      <text x="824" y="564">in large fabrics</text>
+    </g>
+  </g>
+</svg>

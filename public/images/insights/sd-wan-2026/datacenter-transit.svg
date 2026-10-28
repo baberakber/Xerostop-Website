@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">Data center migration with SD-WAN edges behind CE routers</title>
+  <desc id="desc">At the data center, CE routers keep their MPLS and internet circuits and extend them to new SD-WAN edge routers, which connect to the data center core. Legacy sites reach the data center through the CE routers and migrated sites through the SD-WAN overlay, so the data center becomes the transit point between them.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <!-- Data center container -->
+  <rect x="320" y="136" width="560" height="384" rx="18" fill="#1e88e5" fill-opacity="0.06" stroke="#42a5f5" stroke-opacity="0.5"/>
+
+  <!-- Underlay connectors -->
+  <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.75">
+    <path d="M260 250C320 250 330 218 380 218"/>
+    <path d="M260 380C330 380 330 236 380 236"/>
+    <path d="M480 246V300M720 246V300"/>
+    <path d="M480 356V420M720 356V420"/>
+    <path d="M380 228H350V450H380M820 228H850V450H820"/>
+  </g>
+  <g fill="none" stroke="#42a5f5" stroke-width="2" stroke-opacity="0.3">
+    <path d="M500 246L700 300M700 246L500 300"/>
+  </g>
+
+  <!-- Overlay connectors -->
+  <g fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="6 6">
+    <path d="M940 250C890 250 880 322 820 322"/>
+    <path d="M940 380C890 380 880 336 820 336"/>
+  </g>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Data center first: the transit point</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">SD-WAN edges sit behind the existing CE routers and link legacy and migrated sites</text>
+
+    <g font-size="11" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+      <text x="150" y="186" fill="#42a5f5">LEGACY SITES</text>
+      <text x="600" y="166" fill="#42a5f5">DATA CENTER</text>
+      <text x="1050" y="186" fill="#4ade80">SD-WAN SITES</text>
+    </g>
+
+    <!-- Legacy sites -->
+    <rect x="40" y="210" width="220" height="80" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.6"/>
+    <text x="150" y="244" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Legacy branch A</text>
+    <text x="150" y="266" text-anchor="middle" font-size="13" fill="#a9b8cc">MPLS, legacy router</text>
+    <rect x="40" y="340" width="220" height="80" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.6"/>
+    <text x="150" y="374" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Legacy branch B</text>
+    <text x="150" y="396" text-anchor="middle" font-size="13" fill="#a9b8cc">MPLS, legacy router</text>
+
+    <!-- CE routers -->
+    <rect x="380" y="190" width="200" height="56" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="480" y="215" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5fb">CE router 1</text>
+    <text x="480" y="234" text-anchor="middle" font-size="12" fill="#a9b8cc">MPLS circuit</text>
+    <rect x="620" y="190" width="200" height="56" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="720" y="215" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5fb">CE router 2</text>
+    <text x="720" y="234" text-anchor="middle" font-size="12" fill="#a9b8cc">Internet circuit</text>
+
+    <rect x="508" y="262" width="184" height="20" rx="10" fill="#0e1f3a" stroke="#1d3354"/>
+    <text x="600" y="276" text-anchor="middle" font-size="12" fill="#a9b8cc">circuits extended to both edges</text>
+
+    <!-- SD-WAN edges -->
+    <rect x="380" y="300" width="200" height="56" rx="12" fill="#22c55e" fill-opacity="0.1" stroke="#4ade80"/>
+    <text x="480" y="325" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5fb">SD-WAN edge 1</text>
+    <text x="480" y="344" text-anchor="middle" font-size="12" fill="#a9b8cc">Catalyst 8500</text>
+    <rect x="620" y="300" width="200" height="56" rx="12" fill="#22c55e" fill-opacity="0.1" stroke="#4ade80"/>
+    <text x="720" y="325" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5fb">SD-WAN edge 2</text>
+    <text x="720" y="344" text-anchor="middle" font-size="12" fill="#a9b8cc">Catalyst 8500</text>
+
+    <!-- Core -->
+    <rect x="380" y="420" width="440" height="60" rx="12" fill="url(#card)" stroke="#42a5f5" stroke-opacity="0.8"/>
+    <text x="600" y="446" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5fb">Data center core</text>
+    <text x="600" y="466" text-anchor="middle" font-size="12" fill="#a9b8cc">Applications and services; route exchange between both worlds</text>
+
+    <!-- SD-WAN sites -->
+    <rect x="940" y="210" width="220" height="80" rx="14" fill="url(#card)" stroke="#4ade80" stroke-opacity="0.7"/>
+    <text x="1050" y="244" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Migrated branch C</text>
+    <text x="1050" y="266" text-anchor="middle" font-size="13" fill="#a9b8cc">Catalyst 8300</text>
+    <rect x="940" y="340" width="220" height="80" rx="14" fill="url(#card)" stroke="#4ade80" stroke-opacity="0.7"/>
+    <text x="1050" y="374" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Migrated branch D</text>
+    <text x="1050" y="396" text-anchor="middle" font-size="13" fill="#a9b8cc">Catalyst 8200</text>
+
+    <!-- Note -->
+    <rect x="300" y="540" width="600" height="32" rx="16" fill="#07111f" stroke="#4ade80" stroke-opacity="0.7"/>
+    <text x="600" y="561" text-anchor="middle" font-size="13" font-weight="600" fill="#bbf7d0">Plan bandwidth: the data center carries all traffic between legacy and migrated sites</text>
+
+    <!-- Legend -->
+    <g font-size="13" fill="#a9b8cc">
+      <path d="M380 600H420" stroke="#42a5f5" stroke-width="2"/>
+      <text x="430" y="605">Underlay and legacy routing</text>
+      <path d="M660 600H700" stroke="#4ade80" stroke-width="2" stroke-dasharray="6 6"/>
+      <text x="710" y="605">SD-WAN overlay (OMP, IPsec)</text>
+    </g>
+  </g>
+</svg>

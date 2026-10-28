@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">Industry recording mandates compared</title>
+  <desc id="desc">A matrix of six frameworks: MiFID II and FCA SYSC 10A, SEC 17a-4 and FINRA, CFTC 1.31 and 1.35, HIPAA, PCI DSS v4.0.1, and GDPR. For each, it shows who it applies to, what must be captured, minimum retention and the key control.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#dbe5f1" stroke-width="1" stroke-opacity="0.7"/>
+    </pattern>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0b1f3a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="640" fill="#f4f7fb"/>
+  <rect width="1200" height="640" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="50" text-anchor="middle" font-size="26" font-weight="700" fill="#0b1f3a">Industry recording mandates compared</text>
+    <text x="600" y="80" text-anchor="middle" font-size="15" fill="#475569">Most enterprises fall under two or three of these at once. Design for the union, not the minimum.</text>
+
+    <!-- Table card -->
+    <rect x="40" y="104" width="1120" height="498" rx="16" fill="#ffffff" stroke="#dbe5f1" filter="url(#shadow)"/>
+    <path d="M40 120a16 16 0 0 1 16-16h1088a16 16 0 0 1 16 16v28H40Z" fill="#0b1f3a"/>
+
+    <!-- Header -->
+    <g font-size="11.5" font-weight="700" letter-spacing="1.2" fill="#bbdefb">
+      <text x="60" y="131">FRAMEWORK</text>
+      <text x="250" y="131">APPLIES TO</text>
+      <text x="450" y="131">WHAT MUST BE CAPTURED</text>
+      <text x="740" y="131">MINIMUM RETENTION</text>
+      <text x="940" y="131">KEY CONTROL</text>
+    </g>
+
+    <!-- Row stripes -->
+    <g fill="#f4f7fb">
+      <rect x="41" y="223" width="1118" height="75"/>
+      <rect x="41" y="373" width="1118" height="75"/>
+    </g>
+    <path d="M41 524H1159V586a15 15 0 0 1-15 15H56a15 15 0 0 1-15-15Z" fill="#f4f7fb"/>
+    <g stroke="#dbe5f1">
+      <path d="M41 223H1159M41 298H1159M41 373H1159M41 448H1159M41 524H1159"/>
+    </g>
+
+    <!-- Row 1: MiFID II -->
+    <g>
+      <rect x="54" y="168" width="4" height="36" rx="2" fill="#1e88e5"/>
+      <text x="68" y="182" font-size="14.5" font-weight="700" fill="#0b1f3a">MiFID II / FCA</text>
+      <text x="68" y="201" font-size="12" fill="#64748b">SYSC 10A</text>
+      <text x="250" y="182" font-size="13" fill="#475569">EU and UK investment</text>
+      <text x="250" y="201" font-size="13" fill="#475569">firms</text>
+      <text x="450" y="182" font-size="13" fill="#475569">Calls and e-comms that may</text>
+      <text x="450" y="201" font-size="13" fill="#475569">lead to a transaction</text>
+      <text x="740" y="182" font-size="13" font-weight="700" fill="#1565c0">5 years</text>
+      <text x="740" y="201" font-size="12.5" fill="#475569">up to 7 if FCA requests</text>
+      <text x="940" y="182" font-size="13" fill="#0b1f3a">Advance client notice;</text>
+      <text x="940" y="201" font-size="13" fill="#0b1f3a">tamper-resistant storage</text>
+    </g>
+
+    <!-- Row 2: SEC / FINRA -->
+    <g>
+      <rect x="54" y="243" width="4" height="36" rx="2" fill="#1e88e5"/>
+      <text x="68" y="257" font-size="14.5" font-weight="700" fill="#0b1f3a">SEC 17a-4 / FINRA</text>
+      <text x="68" y="276" font-size="12" fill="#64748b">Rule 3170 taping</text>
+      <text x="250" y="257" font-size="13" fill="#475569">US broker-dealers and</text>
+      <text x="250" y="276" font-size="13" fill="#475569">designated taping firms</text>
+      <text x="450" y="257" font-size="13" fill="#475569">Business comms on every channel;</text>
+      <text x="450" y="276" font-size="13" fill="#475569">taping firms record sales calls</text>
+      <text x="740" y="257" font-size="13" font-weight="700" fill="#1565c0">3 years</text>
+      <text x="740" y="276" font-size="12.5" fill="#475569">first 2 readily accessible</text>
+      <text x="940" y="257" font-size="13" fill="#0b1f3a">WORM or audit-trail storage;</text>
+      <text x="940" y="276" font-size="13" fill="#0b1f3a">indexed by person and date</text>
+    </g>
+
+    <!-- Row 3: CFTC -->
+    <g>
+      <rect x="54" y="318" width="4" height="36" rx="2" fill="#1e88e5"/>
+      <text x="68" y="332" font-size="14.5" font-weight="700" fill="#0b1f3a">CFTC 1.31 / 1.35</text>
+      <text x="68" y="351" font-size="12" fill="#64748b">Futures and swaps</text>
+      <text x="250" y="332" font-size="13" fill="#475569">FCMs, RFEDs, large IBs,</text>
+      <text x="250" y="351" font-size="13" fill="#475569">DCM and SEF members</text>
+      <text x="450" y="332" font-size="13" fill="#475569">Oral communications that lead</text>
+      <text x="450" y="351" font-size="13" fill="#475569">to a commodity interest trade</text>
+      <text x="740" y="332" font-size="13" font-weight="700" fill="#1565c0">1 year (oral)</text>
+      <text x="740" y="351" font-size="12.5" fill="#475569">5 years for written records</text>
+      <text x="940" y="332" font-size="13" fill="#0b1f3a">Retrievable by transaction;</text>
+      <text x="940" y="351" font-size="13" fill="#0b1f3a">readily accessible</text>
+    </g>
+
+    <!-- Row 4: HIPAA -->
+    <g>
+      <rect x="54" y="393" width="4" height="36" rx="2" fill="#7c3aed"/>
+      <text x="68" y="407" font-size="14.5" font-weight="700" fill="#0b1f3a">HIPAA</text>
+      <text x="68" y="426" font-size="12" fill="#64748b">Privacy and Security Rules</text>
+      <text x="250" y="407" font-size="13" fill="#475569">Covered entities and</text>
+      <text x="250" y="426" font-size="13" fill="#475569">business associates</text>
+      <text x="450" y="407" font-size="13" fill="#475569">Any recording or transcript</text>
+      <text x="450" y="426" font-size="13" fill="#475569">that contains PHI</text>
+      <text x="740" y="407" font-size="13" font-weight="700" fill="#6d28d9">State records law</text>
+      <text x="740" y="426" font-size="12.5" fill="#475569">HIPAA documentation: 6 years</text>
+      <text x="940" y="407" font-size="13" fill="#0b1f3a">Access control, audit logs,</text>
+      <text x="940" y="426" font-size="13" fill="#0b1f3a">BAA with recording vendor</text>
+    </g>
+
+    <!-- Row 5: PCI DSS -->
+    <g>
+      <rect x="54" y="468" width="4" height="36" rx="2" fill="#7c3aed"/>
+      <text x="68" y="482" font-size="14.5" font-weight="700" fill="#0b1f3a">PCI DSS v4.0.1</text>
+      <text x="68" y="501" font-size="12" fill="#64748b">Requirement 3.3.1</text>
+      <text x="250" y="482" font-size="13" fill="#475569">Anyone taking card</text>
+      <text x="250" y="501" font-size="13" fill="#475569">payments by phone</text>
+      <text x="450" y="482" font-size="13" fill="#475569">Never retain the CVV after</text>
+      <text x="450" y="501" font-size="13" fill="#475569">authorization, even encrypted</text>
+      <text x="740" y="482" font-size="13" font-weight="700" fill="#6d28d9">Zero for CVV</text>
+      <text x="740" y="501" font-size="12.5" fill="#475569">PAN: minimum necessary</text>
+      <text x="940" y="482" font-size="13" fill="#0b1f3a">Pause and resume, or</text>
+      <text x="940" y="501" font-size="13" fill="#0b1f3a">DTMF masking</text>
+    </g>
+
+    <!-- Row 6: GDPR -->
+    <g>
+      <rect x="54" y="544" width="4" height="36" rx="2" fill="#0b1f3a"/>
+      <text x="68" y="558" font-size="14.5" font-weight="700" fill="#0b1f3a">GDPR / UK GDPR</text>
+      <text x="68" y="577" font-size="12" fill="#64748b">Articles 5, 6 and 35</text>
+      <text x="250" y="558" font-size="13" fill="#475569">Anyone processing EU or</text>
+      <text x="250" y="577" font-size="13" fill="#475569">UK personal data</text>
+      <text x="450" y="558" font-size="13" fill="#475569">Only what the stated purpose</text>
+      <text x="450" y="577" font-size="13" fill="#475569">actually requires</text>
+      <text x="740" y="558" font-size="13" font-weight="700" fill="#0b1f3a">No longer than</text>
+      <text x="740" y="577" font-size="12.5" fill="#475569">necessary for the purpose</text>
+      <text x="940" y="558" font-size="13" fill="#0b1f3a">Lawful basis, DPIA, access</text>
+      <text x="940" y="577" font-size="13" fill="#0b1f3a">and erasure workflows</text>
+    </g>
+
+    <text x="600" y="626" text-anchor="middle" font-size="12" fill="#64748b">Summary only. Confirm scope and retention with counsel for each jurisdiction and line of business.</text>
+  </g>
+</svg>

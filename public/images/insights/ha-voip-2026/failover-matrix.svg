@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">Failure domains and fallbacks for high-availability voice</title>
+  <desc id="desc">Six failure domains, each with the component that takes over and its typical recovery time: SBC node, data center or region, carrier, WAN link, cloud unreachable from a branch, and site power.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">Failure domains and fallbacks</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">Every failure needs a tested answer, and a known recovery time</text>
+
+    <g font-size="12" font-weight="700" letter-spacing="1.5" fill="#42a5f5">
+      <text x="104" y="128">FAILURE</text>
+      <text x="440" y="128">WHAT TAKES OVER</text>
+      <text x="1040" y="128" text-anchor="middle">TYPICAL RECOVERY</text>
+    </g>
+
+    <!-- Row backgrounds -->
+    <g stroke="#1e88e5" stroke-opacity="0.4">
+      <rect x="40" y="142" width="1120" height="56" rx="12" fill="#132b4f"/>
+      <rect x="40" y="208" width="1120" height="56" rx="12" fill="#0f2240"/>
+      <rect x="40" y="274" width="1120" height="56" rx="12" fill="#132b4f"/>
+      <rect x="40" y="340" width="1120" height="56" rx="12" fill="#0f2240"/>
+      <rect x="40" y="406" width="1120" height="56" rx="12" fill="#132b4f"/>
+      <rect x="40" y="472" width="1120" height="56" rx="12" fill="#0f2240"/>
+    </g>
+
+    <!-- Row numbers -->
+    <g>
+      <circle cx="74" cy="170" r="14" fill="#1e88e5"/>
+      <circle cx="74" cy="236" r="14" fill="#1e88e5"/>
+      <circle cx="74" cy="302" r="14" fill="#1e88e5"/>
+      <circle cx="74" cy="368" r="14" fill="#1e88e5"/>
+      <circle cx="74" cy="434" r="14" fill="#1e88e5"/>
+      <circle cx="74" cy="500" r="14" fill="#1e88e5"/>
+    </g>
+    <g font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">
+      <text x="74" y="175">1</text>
+      <text x="74" y="241">2</text>
+      <text x="74" y="307">3</text>
+      <text x="74" y="373">4</text>
+      <text x="74" y="439">5</text>
+      <text x="74" y="505">6</text>
+    </g>
+
+    <!-- Failure names -->
+    <g font-size="16" font-weight="700" fill="#f1f5fb">
+      <text x="104" y="176">SBC node fails</text>
+      <text x="104" y="242">Data center or region lost</text>
+      <text x="104" y="308">Carrier outage</text>
+      <text x="104" y="374">WAN or internet link down</text>
+      <text x="104" y="440">Cloud unreachable from a branch</text>
+      <text x="104" y="506">Site power failure</text>
+    </g>
+
+    <!-- Fallbacks -->
+    <g font-size="15" fill="#a9b8cc">
+      <text x="440" y="176">HA peer in the same site takes over active calls</text>
+      <text x="440" y="242">Geo-redundant SBC pair in the second region</text>
+      <text x="440" y="308">Second carrier through SBC priority routing</text>
+      <text x="440" y="374">SD-WAN moves voice to the second ISP or LTE/5G</text>
+      <text x="440" y="440">Survivability appliance and local PSTN trunk</text>
+      <text x="440" y="506">UPS bridges until generator or utility power returns</text>
+    </g>
+
+    <!-- Recovery chips -->
+    <g font-size="13" font-weight="700" text-anchor="middle">
+      <rect x="940" y="154" width="200" height="32" rx="16" fill="#42a5f5" fill-opacity="0.15" stroke="#42a5f5"/>
+      <text x="1040" y="175" fill="#bbdefb">Seconds</text>
+
+      <rect x="940" y="220" width="200" height="32" rx="16" fill="#a78bfa" fill-opacity="0.15" stroke="#a78bfa"/>
+      <text x="1040" y="241" fill="#ddd6fe">Seconds to minutes</text>
+
+      <rect x="940" y="286" width="200" height="32" rx="16" fill="#42a5f5" fill-opacity="0.15" stroke="#42a5f5"/>
+      <text x="1040" y="307" fill="#bbdefb">Next call attempt</text>
+
+      <rect x="940" y="352" width="200" height="32" rx="16" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee"/>
+      <text x="1040" y="373" fill="#a5f3fc">Sub-second to seconds</text>
+
+      <rect x="940" y="418" width="200" height="32" rx="16" fill="#42a5f5" fill-opacity="0.15" stroke="#42a5f5"/>
+      <text x="1040" y="439" fill="#bbdefb">Seconds</text>
+
+      <rect x="940" y="484" width="200" height="32" rx="16" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee"/>
+      <text x="1040" y="505" fill="#a5f3fc">Instant (UPS)</text>
+    </g>
+
+    <!-- Legend -->
+    <g font-size="13" fill="#a9b8cc">
+      <circle cx="380" cy="572" r="6" fill="#22d3ee"/>
+      <text x="394" y="577">Near-instant</text>
+      <circle cx="530" cy="572" r="6" fill="#42a5f5"/>
+      <text x="544" y="577">Seconds</text>
+      <circle cx="650" cy="572" r="6" fill="#a78bfa"/>
+      <text x="664" y="577">Minutes, test it regularly</text>
+    </g>
+  </g>
+</svg>

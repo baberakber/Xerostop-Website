@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">North-south versus east-west traffic in a data center</title>
+  <desc id="desc">North-south traffic from the internet, WAN and users passes through the perimeter firewall into the web tier. East-west traffic flows between the web, application and database tiers inside the fabric and never crosses the perimeter. A dashed red path shows an attacker moving laterally from a compromised web server to the database tier without being inspected.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15294a"/>
+      <stop offset="1" stop-color="#0f2240"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#42a5f5"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#f87171"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <!-- Data center container -->
+  <rect x="60" y="272" width="1080" height="260" rx="18" fill="#1e88e5" fill-opacity="0.06" stroke="#42a5f5" stroke-opacity="0.5"/>
+
+  <!-- North-south path -->
+  <g fill="none" stroke="#42a5f5" stroke-width="2.5">
+    <path d="M600 168V198"/>
+    <path d="M600 250V262H250V346" marker-end="url(#arrowBlue)"/>
+  </g>
+
+  <!-- East-west paths -->
+  <g fill="none" stroke="#4ade80" stroke-width="2.5">
+    <path d="M396 395H454" marker-start="url(#arrowGreen)" marker-end="url(#arrowGreen)"/>
+    <path d="M746 395H804" marker-start="url(#arrowGreen)" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <!-- Lateral movement path -->
+  <path d="M250 462C250 506 950 506 950 466" fill="none" stroke="#f87171" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#arrowRed)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#f1f5fb">North-south vs east-west traffic</text>
+    <text x="600" y="88" text-anchor="middle" font-size="15" fill="#a9b8cc">Most data center traffic never crosses the perimeter firewall</text>
+
+    <!-- Internet -->
+    <rect x="450" y="112" width="300" height="56" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.7"/>
+    <text x="600" y="137" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5fb">Internet, WAN and users</text>
+    <text x="600" y="156" text-anchor="middle" font-size="12" fill="#a9b8cc">Customers, partners, branch sites</text>
+
+    <!-- Perimeter firewall -->
+    <rect x="360" y="198" width="480" height="52" rx="12" fill="#1e88e5" fill-opacity="0.16" stroke="#42a5f5"/>
+    <text x="600" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#f1f5fb">Perimeter firewall</text>
+    <text x="600" y="240" text-anchor="middle" font-size="12" fill="#bbdefb">Inspects north-south traffic only</text>
+
+    <text x="1116" y="298" text-anchor="end" font-size="11" font-weight="700" letter-spacing="1.5" fill="#42a5f5">DATA CENTER FABRIC</text>
+    <text x="264" y="300" font-size="12" font-weight="600" fill="#90caf9">north-south</text>
+
+    <!-- Tiers -->
+    <rect x="110" y="346" width="280" height="116" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.7"/>
+    <text x="134" y="382" font-size="17" font-weight="700" fill="#f1f5fb">Web tier</text>
+    <text x="134" y="404" font-size="13" fill="#a9b8cc">Load balancers, web servers</text>
+    <g fill="#42a5f5" fill-opacity="0.8">
+      <rect x="134" y="424" width="56" height="8" rx="2"/><rect x="198" y="424" width="56" height="8" rx="2"/><rect x="262" y="424" width="56" height="8" rx="2"/>
+      <rect x="134" y="438" width="56" height="8" rx="2"/><rect x="198" y="438" width="56" height="8" rx="2"/><rect x="262" y="438" width="56" height="8" rx="2"/>
+    </g>
+    <rect x="290" y="360" width="88" height="22" rx="11" fill="#f87171" fill-opacity="0.15" stroke="#f87171"/>
+    <text x="334" y="375" text-anchor="middle" font-size="11" font-weight="700" fill="#fecaca">compromised</text>
+
+    <rect x="460" y="346" width="280" height="116" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.7"/>
+    <text x="484" y="382" font-size="17" font-weight="700" fill="#f1f5fb">Application tier</text>
+    <text x="484" y="404" font-size="13" fill="#a9b8cc">APIs, middleware, message queues</text>
+    <g fill="#42a5f5" fill-opacity="0.8">
+      <rect x="484" y="424" width="56" height="8" rx="2"/><rect x="548" y="424" width="56" height="8" rx="2"/><rect x="612" y="424" width="56" height="8" rx="2"/>
+      <rect x="484" y="438" width="56" height="8" rx="2"/><rect x="548" y="438" width="56" height="8" rx="2"/><rect x="612" y="438" width="56" height="8" rx="2"/>
+    </g>
+
+    <rect x="810" y="346" width="280" height="116" rx="14" fill="url(#card)" stroke="#1e88e5" stroke-opacity="0.7"/>
+    <text x="834" y="382" font-size="17" font-weight="700" fill="#f1f5fb">Database tier</text>
+    <text x="834" y="404" font-size="13" fill="#a9b8cc">Customer and payment data</text>
+    <g fill="#42a5f5" fill-opacity="0.8">
+      <rect x="834" y="424" width="56" height="8" rx="2"/><rect x="898" y="424" width="56" height="8" rx="2"/><rect x="962" y="424" width="56" height="8" rx="2"/>
+      <rect x="834" y="438" width="56" height="8" rx="2"/><rect x="898" y="438" width="56" height="8" rx="2"/><rect x="962" y="438" width="56" height="8" rx="2"/>
+    </g>
+
+    <g font-size="11" font-weight="600" fill="#86efac" text-anchor="middle">
+      <text x="425" y="384">east-west</text>
+      <text x="775" y="384">east-west</text>
+    </g>
+
+    <text x="600" y="520" text-anchor="middle" font-size="13" font-weight="600" fill="#fca5a5">Lateral movement from one compromised server, invisible to the perimeter</text>
+
+    <!-- Note -->
+    <rect x="280" y="546" width="640" height="32" rx="16" fill="#07111f" stroke="#4ade80" stroke-opacity="0.7"/>
+    <text x="600" y="567" text-anchor="middle" font-size="13" font-weight="600" fill="#bbf7d0">Design rule: control east-west traffic as deliberately as north-south traffic</text>
+
+    <!-- Legend -->
+    <g font-size="13" fill="#a9b8cc">
+      <path d="M290 602H330" stroke="#42a5f5" stroke-width="2.5"/>
+      <text x="340" y="607">North-south</text>
+      <path d="M480 602H520" stroke="#4ade80" stroke-width="2.5"/>
+      <text x="530" y="607">East-west</text>
+      <path d="M660 602H700" stroke="#f87171" stroke-width="2.5" stroke-dasharray="8 6"/>
+      <text x="710" y="607">Lateral movement</text>
+    </g>
+  </g>
+</svg>

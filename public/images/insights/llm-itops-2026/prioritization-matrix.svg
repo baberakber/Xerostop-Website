@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-labelledby="title desc">
+  <title id="title">Prioritization matrix for LLM use cases in IT operations</title>
+  <desc id="desc">A two-by-two chart of value against risk. High value, low risk use cases such as ticket triage, knowledge base replies, incident summaries, log analysis, runbooks and IT search are marked start here. High value, higher risk use cases need careful planning. Low value, low risk ones are easy extras, and high risk, lower value ones should be heavily constrained.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d3354" stroke-width="1" stroke-opacity="0.45"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5 0 10Z" fill="#42a5f5"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <rect width="1200" height="620" fill="url(#grid)"/>
+
+  <g font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+    <text x="100" y="62" font-size="26" font-weight="700" fill="#f1f5fb">Where to start: value versus risk</text>
+    <text x="100" y="90" font-size="15" fill="#a9b8cc">Pilot the top-left quadrant first, then move right as guardrails mature</text>
+
+    <!-- Quadrants -->
+    <rect x="100" y="120" width="320" height="220" fill="#22c55e" fill-opacity="0.10" stroke="#22c55e" stroke-opacity="0.55" stroke-width="1.5"/>
+    <rect x="420" y="120" width="320" height="220" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-opacity="0.55" stroke-width="1.5"/>
+    <rect x="100" y="340" width="320" height="220" fill="#42a5f5" fill-opacity="0.07" stroke="#42a5f5" stroke-opacity="0.45" stroke-width="1.5"/>
+    <rect x="420" y="340" width="320" height="220" fill="#ef4444" fill-opacity="0.08" stroke="#ef4444" stroke-opacity="0.55" stroke-width="1.5"/>
+
+    <text x="116" y="148" font-size="15" font-weight="700" fill="#4ade80">START HERE</text>
+    <text x="436" y="148" font-size="15" font-weight="700" fill="#fbbf24">PLAN CAREFULLY</text>
+    <text x="116" y="368" font-size="15" font-weight="700" fill="#7cc4fa">EASY EXTRAS</text>
+    <text x="436" y="368" font-size="15" font-weight="700" fill="#f87171">CONSTRAIN HEAVILY</text>
+
+    <!-- Axes -->
+    <path d="M100 575H740" stroke="#42a5f5" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="420" y="602" font-size="14" fill="#a9b8cc" text-anchor="middle">Risk if the output is wrong</text>
+    <path d="M85 560V120" stroke="#42a5f5" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="62" y="340" font-size="14" fill="#a9b8cc" text-anchor="middle" transform="rotate(-90 62 340)">Business value</text>
+
+    <!-- Bubbles -->
+    <g font-size="13" fill="#dbe7f5">
+      <!-- Start here -->
+      <g><circle cx="140" cy="180" r="13" fill="#1e88e5"/><text x="140" y="184" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">01</text><text x="160" y="185">Triage</text></g>
+      <g><circle cx="285" cy="180" r="13" fill="#1e88e5"/><text x="285" y="184" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">03</text><text x="305" y="185">KB replies</text></g>
+      <g><circle cx="140" cy="225" r="13" fill="#1e88e5"/><text x="140" y="229" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">05</text><text x="160" y="230">Summaries</text></g>
+      <g><circle cx="285" cy="225" r="13" fill="#1e88e5"/><text x="285" y="229" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">06</text><text x="305" y="230">Log analysis</text></g>
+      <g><circle cx="140" cy="270" r="13" fill="#1e88e5"/><text x="140" y="274" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">09</text><text x="160" y="275">Runbooks</text></g>
+      <g><circle cx="285" cy="270" r="13" fill="#1e88e5"/><text x="285" y="274" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">10</text><text x="305" y="275">IT search</text></g>
+
+      <!-- Plan carefully -->
+      <g><circle cx="460" cy="180" r="13" fill="#1e88e5"/><text x="460" y="184" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">02</text><text x="480" y="185">Self-service</text></g>
+      <g><circle cx="605" cy="180" r="13" fill="#1e88e5"/><text x="605" y="184" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">07</text><text x="625" y="185">Root cause</text></g>
+      <g><circle cx="460" cy="225" r="13" fill="#1e88e5"/><text x="460" y="229" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">13</text><text x="480" y="230">NL queries</text></g>
+      <g><circle cx="605" cy="225" r="13" fill="#1e88e5"/><text x="605" y="229" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">14</text><text x="625" y="230">UC quality</text></g>
+      <g><circle cx="460" cy="270" r="13" fill="#1e88e5"/><text x="460" y="274" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">15</text><text x="480" y="275">Change review</text></g>
+      <g><circle cx="605" cy="270" r="13" fill="#1e88e5"/><text x="605" y="274" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">16</text><text x="625" y="275">SOC triage</text></g>
+      <g><circle cx="460" cy="315" r="13" fill="#1e88e5"/><text x="460" y="319" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">18</text><text x="480" y="320">Scripts and IaC</text></g>
+      <g><circle cx="605" cy="315" r="13" fill="#1e88e5"/><text x="605" y="319" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">19</text><text x="625" y="320">Agents</text></g>
+
+      <!-- Easy extras -->
+      <g><circle cx="140" cy="405" r="13" fill="#1e88e5"/><text x="140" y="409" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">08</text><text x="160" y="410">Postmortems</text></g>
+      <g><circle cx="285" cy="405" r="13" fill="#1e88e5"/><text x="285" y="409" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">11</text><text x="305" y="410">Docs</text></g>
+
+      <!-- Constrain heavily -->
+      <g><circle cx="460" cy="405" r="13" fill="#1e88e5"/><text x="460" y="409" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">04</text><text x="480" y="410">Access requests</text></g>
+      <g><circle cx="605" cy="405" r="13" fill="#1e88e5"/><text x="605" y="409" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">12</text><text x="625" y="410">Net configs</text></g>
+      <g><circle cx="460" cy="450" r="13" fill="#1e88e5"/><text x="460" y="454" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">17</text><text x="480" y="455">Compliance</text></g>
+    </g>
+
+    <!-- Explanation panel -->
+    <g>
+      <rect x="790" y="140" width="16" height="16" rx="3" fill="#22c55e"/>
+      <text x="818" y="154" font-size="17" font-weight="700" fill="#f1f5fb">Start here</text>
+      <text x="818" y="180" font-size="14" fill="#a9b8cc">High value, low risk. Pilot first, with</text>
+      <text x="818" y="200" font-size="14" fill="#a9b8cc">a person reviewing every output.</text>
+
+      <rect x="790" y="245" width="16" height="16" rx="3" fill="#f59e0b"/>
+      <text x="818" y="259" font-size="17" font-weight="700" fill="#f1f5fb">Plan carefully</text>
+      <text x="818" y="285" font-size="14" fill="#a9b8cc">High value, more risk. Add RAG, scoped</text>
+      <text x="818" y="305" font-size="14" fill="#a9b8cc">tools, approvals and audit logs.</text>
+
+      <rect x="790" y="350" width="16" height="16" rx="3" fill="#42a5f5"/>
+      <text x="818" y="364" font-size="17" font-weight="700" fill="#f1f5fb">Easy extras</text>
+      <text x="818" y="390" font-size="14" fill="#a9b8cc">Lower value, low risk. Cheap add-ons</text>
+      <text x="818" y="410" font-size="14" fill="#a9b8cc">once the platform is in place.</text>
+
+      <rect x="790" y="455" width="16" height="16" rx="3" fill="#ef4444"/>
+      <text x="818" y="469" font-size="17" font-weight="700" fill="#f1f5fb">Constrain heavily</text>
+      <text x="818" y="495" font-size="14" fill="#a9b8cc">The LLM drafts only. A person approves</text>
+      <text x="818" y="515" font-size="14" fill="#a9b8cc">every change, access grant or sign-off.</text>
+    </g>
+  </g>
+</svg>
